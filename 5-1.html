@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<title>Pascal | Calcul de somme</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initiale-scale=1.0">
+<style>
+#nav {
+    height:86%;
+}
+#section p{
+    font-size:18px;
+	font-family: monospace;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header">
+<h1><marquee>Calcul de somme</marquee></h1>
+</div>
+
+<div id="nav">
+<div id="menu">
+<a href="5-1.html">Calcul de somme</a><br>
+<a href="5-2.html">Calcul sur les suites</a><br>
+<a href="5-3.html">Recherche du minimum et du maximum</a><br>
+<a href="5-4.html">Triangle de Pascal</a><br><br>
+<a href="3ème.html">Précédent</a><br>
+<a href="aide.html">Aide</a><br>
+</div>
+</div>
+
+<div id="section">
+<pre>
+<p>S := valeur précédente de S + m 
+=> Il s’agit donc d’un algorithme récurrent d’ordre 1.</p>
+<br>
+<font style="color:red"><h2>Traduction en Pascal: </h2></font>
+<p>program Calcul_somme1; 
+uses wincrt; 
+var n:integer;
+
+Function Somme1 (n:integer):integer;
+ Var C,S,m :integer; 
+ Begin S:=0;
+  For c:= 1 to n Do Begin Readln(m); S := S + m;
+ End; 
+ Somme1 := S;
+ End;
+ 
+begin
+Clrscr ;
+ repeat
+  Write('Donner un entier: ');
+  read(n); 
+ until(n>0);
+writeln(‘La Somme est:’,somme1(n) :5);
+end.</p>
+<br>
+</pre>
+</div>
+
+<div id="footer">
+© Copyright 2014-2016 Tous droits réservés - Velzimar
+</div>
+
+</body>
+</html>

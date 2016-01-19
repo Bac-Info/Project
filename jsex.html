@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>BAC Info | JS Cours</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+<script src="js/soluex.js"></script>
+  
+  
+<style>
+body {
+  background-color: #eee;
+}
+.navbar-default {
+  background-color: #f0db4f;
+  border-color: #e2cd3e;
+  }
+</style>
+</head>
+
+<body>
+<!--Begin nav -->
+<nav class="navbar navbar-default ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="accueil.html">Velzimar-JS</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jscours.html">cours JavaScript</a></li>
+						<li class="active dropdown">
+						  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Exercies JavaScript
+						  <span class="caret"></span></a>
+						  <ul class="dropdown-menu">
+							<li><a href="#Ex1">Exercice 1</a></li>
+							<li><a href="#Ex2">Exercice 2</a></li>
+							<li><a href="#Ex3">Exercice 3</a></li> 
+						  </ul>
+						</li>
+        <li><a href="#">Notes</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--End nav -->
+
+	<div class="container">
+		<div class="well">
+<!--Begin template-->
+<center><h2> <a name="EX1">Exercice 1: 'Description'</a></h2></center>
+<pre><h3 style="color:purple">'Enoncé'</h3>
+<h4 id="solu1b"><a onclick="solu1()" >Voir Solution</a></h4>
+</pre>
+<!--End template-->
+<!--Begin template-->
+<center><h2> <a name="EX2">Exercice 2: 'Description'</a></h2></center>
+<pre><h3 style="color:purple">'Enoncé'</h3>
+<h4 id="solu2b"><a onclick="solu2()" >Voir Solution</a></h4>
+</pre>
+<!--End template-->
+<!--Begin template-->
+<center><h2> <a name="EX3">Exercice 3: 'Description'</a></h2></center>
+<pre><h3 style="color:purple">'Enoncé'</h3>
+<h4 id="solu3b"><a onclick="solu3()" >Voir Solution</a></h4>
+</pre>
+<!--End template-->
+		</div>
+	</div>
+</body>
+
+</html>
