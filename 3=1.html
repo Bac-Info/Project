@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html><html>
 
 <head>
 <title>Pascal | Les algorithmes de tri</title>
@@ -8,14 +8,14 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <style>
 #nav {
-    height:540%;
+    height:850%;
 }
 #section p{
     font-size:21px;
-	font-family: monospace;
+ font-family: monospace;
 }
 font{
-	font-size:20px;
+ font-size:20px;
 }
 </style>
 </head>
@@ -29,7 +29,7 @@ font{
 <div id="nav">
 <div id="menu">
 <a href="3=1.html">Les algorithmes de tri</a><br>
-<a href="cours pascal.html">Précédent</a><br>
+<a href="courspascal.html">Précédent</a><br>
 <a href="aide.html">Aide</a><br>
 </div>
 </div>
@@ -37,7 +37,6 @@ font{
 <div id="section">
 <pre>
 <font style="color:lightblue"><p align="center"><b>TRI à bulle </b></p></font><br>
-<br>
 <font style="color:red">Definition :</font>
 <p>Le principe du tri bulle (bubble sort) est de comparer deux à deux les éléments e1 et e2 consécutifs d'un 
 tableau et d'effecteur une permutation si e1 > e2. On continue de trier jusqu'à ce qu'il n'y ait plus de permutation.</p>
@@ -110,12 +109,9 @@ BEGIN
  affiche(n,t); 
 END.
 </p>
-<br>
 <font style="color:lightblue"><p align="center"><b>TRI par insertion </b></p></font><br>
-<br>
 <font style="color:red">Definition :</font>
 <p>Le principe du tri par insertion est d'insérer à la n-ième itération le n-ième élément à la bonne place.</p>
-<br>
 <font style="color:red">Traduction en Pascal :</font>
 <p>Program triinsertion ; 
 uses wincrt ; 
@@ -191,20 +187,17 @@ begin
 end.
 
 </p>
-<br>
 <font style="color:lightblue"><p align="center"><b>TRI par sélection</b></p></font><br>
-<br>
 <font style="color:red">Definition :</font>
 <p>Le principe du tri par sélection consiste à : 
-1-	déterminer le plus petit élément de l'élément (ou le plus grand) 
-2-	le placer à sa position finale (c'est-à-dire en dernière ou en première position du tableau) 
-3-	rechercher le second plus grand élément (ou le second plus petit élément) 
-4-	le placer à sa position finale (c'est-à-dire en avant-dernière ou en seconde position) 
-5-	répéter ce traitement jusqu’à ce que le tableau soit trié.
+1- déterminer le plus petit élément de l'élément (ou le plus grand) 
+2- le placer à sa position finale (c'est-à-dire en dernière ou en première position du tableau) 
+3- rechercher le second plus grand élément (ou le second plus petit élément) 
+4- le placer à sa position finale (c'est-à-dire en avant-dernière ou en seconde position) 
+5- répéter ce traitement jusqu’à ce que le tableau soit trié.
 </p>
-<br>
 <font style="color:red">Traduction en Pascal :</font>
-<p>Program triselection ;
+<p>Program TriInsertion ;
 uses wincrt ;
 type
    tab=array [1..20] of integer ;    
@@ -274,12 +267,90 @@ End.
 
 </p>
 <br>
+<font style="color:lightblue"><p align="center"><b>TRI Shell</b></p></font><br>
+<font style="color:red">Definition :</font>
+<p>* Le tri shell est une amélioration de tri par insertion, au lieu de faire une rotation entre tous les éléments on réalise une rotation 
+entre des éléments éloignès de p position (p = pas)</p>
+<p>* On commence par un pas élévé et on diminue à chaque fois le pas jusqu’à avoir un pas égale à 1.</p>
+<p>* Le pas calculé en utilisant la formule de suite suivante: ( p<sub>0</sub> = 1 ; p<sub>k</sub> = p<sub>k-1</sub> + 1 )</p>
+<font style="color:red">Traduction en Pascal :</font>
+<p>
+program Tri_Shell;
+uses wincrt;
+type
+ tab = array[1..20] of integer ;
+var
+ t : tab ;
+ n : integer ;
+
+ Procedure Shell(var t : tab ; n : integer);
+  var
+   p,i,j,aux : integer ;
+  begin
+   p := 1;
+   while (p &lsaquo; n) do
+    begin
+     p := p*3 + 1 ;
+    end;
+   while ( p<>1 ) do
+    begin 
+     p := p div 3 ;
+     for i := p+1 to n do
+      begin
+       if (t[i] &lsaquo; t[i-p]) then
+        begin
+         aux := t[i];
+         j := i;
+         repeat
+          t[j] := t[j-p] ;
+          j := j-p ;
+         until (j &lsaquo;= p) or (t[j-p] &lsaquo; aux) ;
+         t[j] := aux;
+        end;
+      end;
+    end;
+  end;
+
+ Procedure saisir(var t : tab ; var n : integer);
+  var
+   i : integer ;
+  begin
+   repeat
+    writeln('Donner N');
+    readln(N);
+   until (n in [2..20]);
+   for i := 1 to n do
+    readln(t[i]);
+  end;
+
+ Procedure affiche(t:tab; n : integer);
+  var
+   i : integer ;
+  begin
+   write('|');
+   for i:= 1 to n do 
+   write(t[i],'|');
+ end;
+
+begin
+ Saisir(t,n);
+ Shell(t,n);
+ Affiche(t,n);
+end.
+
+</p>
+<font style="color:lightblue"><p align="center"><b>TRI fusion</b></p></font><br>
+<font style="color:red">Definition :</font>
+<p>
+Le tri fusion consiste à diviser le tableau en deux parties, à trier chacune d'elle 
+puis à la fusionner pour trier une partie, on refait le même traitement déjà décrit 
+on utilisant des apelles récursives ppur diviser le tableau.
+</p>
+<font style="color:red">Traduction en Pascal :</font>
 </pre>
 </div>
 
-<div id="footer">
-© Copyright 2014-2016 Tous droits réservés - Velzimar
-</div>
+ 
 
 </body>
 </html>
