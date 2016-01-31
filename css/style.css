@@ -80,7 +80,7 @@ ul {
 
 #section{
 	padding-left:17%;
-	padding-top:5%;
+	padding-top:4%;
 }
 
 
@@ -96,9 +96,9 @@ ul {
 }
 
 #section img{
-	margin:20px;
-	width:300px;
-	weight: 300px;
+	margin:10px;
+	width: 280px;
+	weight: 280px;
 	box-shadow : rgba(1,1,1,2.3) 2px 5px 20px ;
 	background-image:url("websiteBackground.jpg");
 	background-repeat: repeat;
