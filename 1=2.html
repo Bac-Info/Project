@@ -18,22 +18,24 @@
     height:		930%;
 }
 #section p{
-    font-size:	18px;
+    font-size:	17px;
 	font-family:	"Arial Black", Gadget, sans-serif;
-}
+} 
 u {
 	color:			#B7DF3C;
 	font-family:	"Arial Black", Gadget, sans-serif;
 }
-i{
-	font-size : 	18px;
-	line-height:90%;
+p{
+	padding : 0px
+	font-size : 	17px;
+	line-height:100%;
 	font-family:	"Arial Black", Gadget, sans-serif;
-}
+} 
 pre{
-	padding-left:	150px;
+	font-size : 	17px;
+	padding-left:	50px;
 	font-family:	"Arial Black", Gadget, sans-serif;
-	line-height:50%;
+	line-height:55%;
 }
 font{
 	line-height:110%;
@@ -74,19 +76,20 @@ font{
 <font style="text-align:center;color:red" size=6><b>Présentation :</b></font>
 	<p>- Un fichier est un ensemble des données de meme type enregistrer dans un support de stockage.</p>
 	<p>- Il existe deux catégories de fichiers:</p><pre>
-		<i>    * Les fichiers textes:
-Les fichiers textes (Text) sont écrits au format texte (chaînes de caractères, nombres) dans lesquels ont peut écrire et lire ligne par ligne ou 
-à la file avec les procédures Write(Ln) et Read(Ln). Chaque fin de ligne du fichier se termine par les caractères 10 et 13 de la table ASCII 
-(qui signifient respectivement Retour ligne (Line Feed, LF) = #10 et Retour chariot (carriage return, CR) = #13). </i>
-		<i>    * Les fichiers typés (Données de meme type): 
-La notion de fichier typé permet de simplifier les opérations de lecture et écriture dans un fichier, mais en réduisant les possibilités. 
-Un fichier typé devra contenir une suite d'éléments qui sont tous de même type.</i></pre>
+		<p>    * Les fichiers textes:</p>
+<p>Les fichiers textes (Text) sont écrits au format texte (chaînes de caractères, nombres) dans lesquels ont peut 
+écrire et lire ligne par ligne ou à la file avec les procédures Write(Ln) et Read(Ln). Chaque fin de ligne du 
+fichier se termine par les caractères 10 et 13 de la table ASCII (qui signifient respectivement Retour ligne 
+(Line Feed, LF) = #10 et Retour chariot (carriage return, CR) = #13).</p>
+		<p>    * Les fichiers typés (Données de meme type): </p>
+<p>La notion de fichier typé permet de simplifier les opérations de lecture et écriture dans un fichier, mais en 
+réduisant les possibilités. Un fichier typé devra contenir une suite d'éléments qui sont tous de même type.</p></pre>
 	<p>- Pour accéder à un bloc (enregistrement) dans un fichier, on doit la localité (pointer).</p>
 	<p>- Le pointeur d'un fichier et un entier qui indique la position à partir de laquelle on va réaliser l'action prochaine (lire/ecrire).</p>
 	<p>- Le premier bloc a la position numero 0.</p>
 	<p>- Il existe deux manières pour accéder à un fichier:<pre>
-		<i>    * Accés Sequenciel: Pour accéder à un enregistrement on doit parcourir tout les enregistrements qui les procèdes.</i>
-		<i>    * Accés Direct(Relative): On accède directement à l'enregistrement voulu selon son numéro d'ordre.</i></pre>
+		<p>* Accés Sequenciel: Pour accéder à un enregistrement on doit parcourir tout les enregistrements qui les procèdes.</p>
+		<p>* Accés Direct(Relative): On accède directement à l'enregistrement voulu selon son numéro d'ordre.</p></pre>
 <p><font style="text-align:center;color:red" Size=6><b>Déclaration en Pascal des fichiers textes:</b></font></p>	
 	<p>Var
 	<p>   Nom_logique : text;
@@ -111,111 +114,111 @@ Un fichier typé devra contenir une suite d'éléments qui sont tous de même type.<
 
 	<p><font style="font-size:22px;text-align:center;color:#E7D9C2;">L'accès direct :</font>
 		<p><u>Pointer:</u><pre>
-			<i>   * Un fichier à accér direct est un fichier ou en peut pointer directement à l'enregistrement voulu.</i>
-			<i>   * La procedure pointer nous permet d'aller directement à une position donnée dans le fichier.</i>
-			<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> pointer(nom logique, position)</i>
-			<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> Seek(Nom logique, position);</i></pre><br>
+			<p>   * Un fichier à accér direct est un fichier ou en peut pointer directement à l'enregistrement voulu.</p>
+			<p>   * La procedure pointer nous permet d'aller directement à une position donnée dans le fichier.</p>
+			<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> pointer(nom logique, position)</p>
+			<font style="color:blue">En Pascal :</font><p style="font-size:22px"> Seek(Nom logique, position);</p></pre><br>
 		<p><u>Taille du fichier:</u><pre>
-			<i>   * Il ne faut pas demander une position après la fin du fichern pour cela on peut utiliser la fonction taille_fichier 
-qui retourne le nombre d'enregistrement dans un fichier pour ne pas depassés la fin du fichier.</i>
-			<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> taille_fichier(nom logique)</i>
-			<font style="color:yellow">En Pascal :</font><i style="font-size:22px">  Filesize(nom logique);</i><br>
-			<i>   * Pour accèder à la fin du fichier pour ajouter une valeur on utilise :</i>	
-			<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> Pointer(f,taille_fichier(f))</i>
-			<font style="color:yellow">En Pascal :</font><i style="font-size:22px">  Seek(f,Filesize(f));</i></pre><br>
+			<p>   * Il ne faut pas demander une position après la fin du fichern pour cela on peut utiliser la fonction taille_fichier 
+qui retourne le nombre d'enregistrement dans un fichier pour ne pas depassés la fin du fichier.</p>
+			<font style="color:blue">En algorithmique :</font><p><p style="font-size:22px"> taille_fichier(nom logique)</p></p>
+			<font style="color:blue">En Pascal :</font><p style="font-size:22px">  Filesize(nom logique);</p><br>
+			<p>   * Pour accèder à la fin du fichier pour ajouter une valeur on utilise :</p>	
+			<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> Pointer(f,taille_fichier(f))</p>
+			<font style="color:blue">En Pascal :</font><p style="font-size:22px">  Seek(f,Filesize(f));</p></pre><br>
 		<p><u>Position du fichier:</u><pre>
-			<i>   * Elle permet de retourner la position courante de pointeur.</i>
-			<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> Position_fichier(nom logique)</i>
-			<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> Filepos(nom logique);</i></pre><br>
+			<p>   * Elle permet de retourner la position courante de pointeur.</p>
+			<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> Position_fichier(nom logique)</p>
+			<font style="color:blue">En Pascal :</font><p style="font-size:22px"> Filepos(nom logique);</p></pre><br>
 			
 	<p><font style="font-size:22px;text-align:center;color:#E7D9C2;">L'accès sequenciel:</font>
 		<p><u>Association:</u><pre>
-			<i>   * Chaque fichier est définie par un chemin d'accés appeler NOM PHYSIQUE du fichier. </i>
-			<i>   * Le NOM LOGIQUE qui est déja déclaré représente le nom du fichier manipulé dans le programme. </i>
-			<i>   * L'association est l'étape qui permet de faire correspandre le nom logique au nom physique.</i>
-			<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> Associer(nom logique, nom physique) ou assigner(nom logique, nom physique)</i>
-			<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> Assign(Nom logique, nom physique);</i></pre><br>
+			<p>   * Chaque fichier est définie par un chemin d'accés appeler NOM PHYSIQUE du fichier. </p>
+			<p>   * Le NOM LOGIQUE qui est déja déclaré représente le nom du fichier manipulé dans le programme. </p>
+			<p>   * L'association est l'étape qui permet de faire correspandre le nom logique au nom physique.</p>
+			<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> Associer(nom logique, nom physique) ou assigner(nom logique, nom physique)</p>
+			<font style="color:blue">En Pascal :</font><p style="font-size:22px"> Assign(Nom logique, nom physique);</p></pre><br>
 		<p><u>Ouverture et création:</u><pre>
-			<i>   * L'action ouvrir permet d'ouvrir un fichier existant et de positionner son pointeur à la position 0. Soit qu'il est ouvert ou fermé. </i>
-			<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> Ouvrir(nom logique)</i>
-			<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> Reset(Nom logique);</i></pre><br>
+			<p>   * L'action ouvrir permet d'ouvrir un fichier existant et de positionner son pointeur à la position 0. Soit qu'il est ouvert ou fermé. </p>
+			<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> Ouvrir(nom logique)</p>
+			<font style="color:blue">En Pascal :</font><p style="font-size:22px"> Reset(Nom logique);</p></pre><br>
 		<p><u>Ecriture dans le fichier:</u><pre>
-			<i>   * L'action ouvrir permet d'ajouter une valeur à la fin du fichier (première position vide) ou bien de modifier une valeur existante dans le fichier. </i>
-			<i>   * Remarque: A chaque ecriture le pointeur s'incrémante automatiquement d'une position. </i>
-			<font style="color:yellow">En algorithmique :</font><i style="font-size:23px"> ecrire(nom logique,variable)</i>
-			<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> write(Nom logique,variable);</i></pre><br>
+			<p>   * L'action ouvrir permet d'ajouter une valeur à la fin du fichier (première position vide) ou bien de modifier une valeur existante dans le fichier. </p>
+			<p>   * Remarque: A chaque ecriture le pointeur s'incrémante automatiquement d'une position. </p>
+			<font style="color:blue">En algorithmique :</font><p style="font-size:23px"> ecrire(nom logique,variable)</p>
+			<font style="color:blue">En Pascal :</font><p style="font-size:22px"> write(Nom logique,variable);</p></pre><br>
 		<p><u>Lecture à partir d'un fichier:</u><pre>
-			<i>   * L'action lire permet de récupérer une valeur de la position pointée dans une ariable mémoire. </i>
-			<i>   * Remarque: A chaque lecture le pointeur s'incrémante automatiquement d'une position. </i>
-			<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> lire(nom logique,variable)</i>
-			<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> read(Nom logique,variable);</i></pre><br>
+			<p>   * L'action lire permet de récupérer une valeur de la position pointée dans une ariable mémoire. </p>
+			<p>   * Remarque: A chaque lecture le pointeur s'incrémante automatiquement d'une position. </p>
+			<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> lire(nom logique,variable)</p>
+			<font style="color:blue">En Pascal :</font><p style="font-size:22px"> read(Nom logique,variable);</p></pre><br>
 		<p><u>Fermiture d'un fichier:</u><pre>
-			<i>   * Une fois on a terminé notre travail, on doit fermer chaque fichier utilisés dans le programme. </i>
-			<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> fermer(nom logique)</i>
-			<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> close(Nom logique);</i></pre><br>
+			<p>   * Une fois on a terminé notre travail, on doit fermer chaque fichier utilisés dans le programme. </p>
+			<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> fermer(nom logique)</p>
+			<font style="color:blue">En Pascal :</font><p style="font-size:22px"> close(Nom logique);</p></pre><br>
 		<p><u>Etape intermédiare:</u><pre>
-			<i>   * Lors de la lecture à partir d'un fichier, on doit tester si on a ateint la fin du fichier puisqu'il est impossible 
-de recupérer une valeur à la fin de fichier. </i>
-		<i>   * Remarque: La fonction finfichier est une fonction booléene qui retourne vrai quand on est à la fin de fichier. </i>
-		<i>   * Remarque: Tout paramètre formel de type fichier doit etre passé par variable. </i>
-		<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> fin_fichier(nom logique)</i>
-		<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> EOF(Nom logique);</i></pre><br>
+			<p>   * Lors de la lecture à partir d'un fichier, on doit tester si on a ateint la fin du fichier puisqu'il est impossible 
+de recupérer une valeur à la fin de fichier. </p>
+		<p>   * Remarque: La fonction finfichier est une fonction booléene qui retourne vrai quand on est à la fin de fichier. </p>
+		<p>   * Remarque: Tout paramètre formel de type fichier doit etre passé par variable. </p>
+		<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> fin_fichier(nom logique)</p>
+		<font style="color:blue">En Pascal :</font><p style="font-size:22px"> EOF(Nom logique);</p></pre><br>
 		<p><u>La procedure 'Effacer':</u><pre>
-			<i>   * Elle permet de supprimer le fichier du support du stockage, il peut etre ouvert ou fermé.</i>
-			<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> Effacer(nom logique)</i>
-			<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> Erase(nom logique);</i></pre><br>
+			<p>   * Elle permet de supprimer le fichier du support du stockage, il peut etre ouvert ou fermé.</p>
+			<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> Effacer(nom logique)</p>
+			<font style="color:blue">En Pascal :</font><p style="font-size:22px"> Erase(nom logique);</p></pre><br>
 		<p><u>La procedure 'Renommer':</u><pre>
-			<i>   * Elle permet de renommer le fichier qui doit etre fermé.</i>
-			<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> Renommer(ancien nom logique, nouveau nom logique)</i>
-			<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> Rename(ancien nom logique, nouveau nom logique);</i></pre><br>
+			<p>   * Elle permet de renommer le fichier qui doit etre fermé.</p>
+			<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> Renommer(ancien nom logique, nouveau nom logique)</p>
+			<font style="color:blue">En Pascal :</font><p style="font-size:22px"> Rename(ancien nom logique, nouveau nom logique);</p></pre><br>
 		<p><u>La procedure 'Tronquer':</u><pre>
-			<i>   * Elle permet de Supprimer tout les enregistrements qui existe après le pointeur (Il faut ajouter ',windos ;' après 'Wincrt').</i>
-			<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> Tronquer(nom logique)</i>
-			<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> Truncate(nom logique);</i></pre><br>	
+			<p>   * Elle permet de Supprimer tout les enregistrements qui existe après le pointeur (Il faut ajouter ',windos ;' après 'Wincrt').</p>
+			<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> Tronquer(nom logique)</p>
+			<font style="color:blue">En Pascal :</font><p style="font-size:22px"> Truncate(nom logique);</p></pre><br>	
 	<p><u>La fonction 'Fin_ligne':(Seulement les fichiers textes)</u><pre>
-		<i>   * Est une fonction booléen qui retourne vrai si on a ateint la fin d'une ligne c'est à dire quand ce trouve sur la caractère retrour chariot <Enter>.</i>
-		<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> Fin_ligne(nom logique)</i>
-		<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> EOLN(nom logique);</i></pre><br>
+		<p>   * Est une fonction booléen qui retourne vrai si on a ateint la fin d'une ligne c'est à dire quand ce trouve sur la caractère retrour chariot <Enter>.</p>
+		<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> Fin_ligne(nom logique)</p>
+		<font style="color:blue">En Pascal :</font><p style="font-size:22px"> EOLN(nom logique);</p></pre><br>
 	<p><u>La fonction 'chercher_fin_ligne':(Seulement les fichiers textes)</u><pre>
-		<i>   * Elle permet de supprimer les espaces et les caractères du tabulation <TAB> avant d'effectuer le test.</i>
-		<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> chercher_fin_ligne(nom logique)</i>
-		<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> SEEKEOFL(nom logique);</i></pre><br>		
+		<p>   * Elle permet de supprimer les espaces et les caractères du tabulation <TAB> avant d'effectuer le test.</p>
+		<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> chercher_fin_ligne(nom logique)</p>
+		<font style="color:blue">En Pascal :</font><p style="font-size:22px"> SEEKEOFL(nom logique);</p></pre><br>		
 	<p><u>La fonction 'chercher_fin_fichier':(Seulement les fichiers textes)</u><pre>
-		<i>   * Elle permet de supprimer les espaces et les caractères du tabulation <TAB>.</i>
-		<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> chercher_fin_fichier(nom logique)</i>
-		<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> SEEKEOF(nom logique);</i></pre><br>
+		<p>   * Elle permet de supprimer les espaces et les caractères du tabulation <TAB>.</p>
+		<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> chercher_fin_fichier(nom logique)</p>
+		<font style="color:blue">En Pascal :</font><p style="font-size:22px"> SEEKEOF(nom logique);</p></pre><br>
 	<p><u>La procedure 'ajouter':(Seulement les fichiers textes)</u><pre>
-		<i>   * Elle permet de ouvrir le fichier et positionne son pointeur à sa fin pour ajouter des éléments du type simple.</i>
-		<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> ajouter(nom logique)</i>
-		<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> APPEND(nom logique);</i></pre><br>
+		<p>   * Elle permet de ouvrir le fichier et positionne son pointeur à sa fin pour ajouter des éléments du type simple.</p>
+		<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> ajouter(nom logique)</p>
+		<font style="color:blue">En Pascal :</font><p style="font-size:22px"> APPEND(nom logique);</p></pre><br>
 	<p><u>La procedure 'lire_nl':(Seulement les fichiers textes)</u><pre>
-		<i>   * Elle permet de ramener le pointeur à la prochaine ligne sur son début.</i>
-		<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> lire_nl(nom logique)</i>
-		<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> Readln(nom logique);</i>
-		<i>   * Si on veut récuperer le contenue de la ligne et ramener le pointeur au début de la prochaine ligne.</i>		
-		<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> lire_nl(nom logique,variable)</i>
-		<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> Readln(nom logique,variable);</i></pre><br>
+		<p>   * Elle permet de ramener le pointeur à la prochaine ligne sur son début.</p>
+		<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> lire_nl(nom logique)</p>
+		<font style="color:blue">En Pascal :</font><p style="font-size:22px"> Readln(nom logique);</p>
+		<p>   * Si on veut récuperer le contenue de la ligne et ramener le pointeur au début de la prochaine ligne.</p>		
+		<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> lire_nl(nom logique,variable)</p>
+		<font style="color:blue">En Pascal :</font><p style="font-size:22px"> Readln(nom logique,variable);</p></pre><br>
 	<p><u>La procedure 'ecrire_nl':(Seulement les fichiers textes)</u><pre>
-		<i>   * Elle permet d'introduire le caractère retour chariot <Enter> pour marquer la fin d'une ligne.</i>
-		<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> ecrire_nl(nom logique)</i>
-		<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> Writeln(nom logique);</i>
-		<i>   * Si on veut sauvegarder des valeurs du type simple puis ramener le pointeur au prochaine ligne.</i>		
-		<font style="color:yellow">En algorithmique :</font><i style="font-size:22px"> ecrire_nl(nom logique,variable1/valeur1,variableN/valeurN)</i>
-		<font style="color:yellow">En Pascal :</font><i style="font-size:22px"> Writeln(nom logique,variable1/valeur1,variableN/valeurN);</i></pre><br>
+		<p>   * Elle permet d'introduire le caractère retour chariot <Enter> pour marquer la fin d'une ligne.</p>
+		<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> ecrire_nl(nom logique)</p>
+		<font style="color:blue">En Pascal :</font><p style="font-size:22px"> Writeln(nom logique);</p>
+		<p>   * Si on veut sauvegarder des valeurs du type simple puis ramener le pointeur au prochaine ligne.</p>		
+		<font style="color:blue">En algorithmique :</font><p style="font-size:22px"> ecrire_nl(nom logique,variable1/valeur1,variableN/valeurN)</p>
+		<font style="color:blue">En Pascal :</font><p style="font-size:22px"> Writeln(nom logique,variable1/valeur1,variableN/valeurN);</p></pre><br>
 <p><font style="text-align:center;color:red" Size=6><b>Tester l'existance d'un fichier :</b></font>
-	<i>   * Pour tester l'existance d'un fichier sur un support de stockage on peut utiliser les directions {$I-} et {$I+} avec la fonction IOResult qui retourne 0 si 
-le fichier existe dans l'emplacement exact.</i>	<pre>
-		<font style="color:yellow">Exemple :</font>
-		<i>assign(f,ch);</i>
-		<i>{$I-}</i>
-		<i>reset(f);</i>
-		<i>if (IOResult <> 0) then</i>
-		<i>  begin</i>
-		<i>	   write('fichier inexistant');</i>
-		<i>	   rewrite(f);</i>
-		<i>  end;</i>
-		<i>{$I+}</i><br>
-	<p><a href=#Top>Top</a></p>
+	<p>   * Pour tester l'existance d'un fichier sur un support de stockage on peut utiliser les directions {$I-} et {$I+} avec la fonction IOResult qui retourne 0 si 
+le fichier existe dans l'emplacement exact.</p>	<pre>
+		<font style="color:blue">Exemple :</font>
+		<p>assign(f,ch);</p>
+		<p>{$I-}</p>
+		<p>reset(f);</p>
+		<p>if (IOResult <> 0) then</p>
+		<p>  begin</p>
+		<p>	   write('fichier inexistant');</p>
+		<p>	   rewrite(f);</p>
+		<p>  end;</p>
+		<p>{$I+}</p><br>
+		<p><a href=#Top>Top</a></p>
 </div>
 
 
