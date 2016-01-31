@@ -15,7 +15,7 @@
   <script src="js/bootstrap.js"></script>
 <style>
 #nav {
-    height:850%;
+    height:1000%;
 }
 #section p{
     font-size:21px;
@@ -367,6 +367,182 @@ puis à la fusionner pour trier une partie, on refait le même traitement déjà
 on utilisant des apelles récursives ppur diviser le tableau.
 </p>
 <font style="color:red">Traduction en Pascal :</font>
+<p>
+Program Tri_Fusion;
+Uses wincrt;
+
+type
+    tab = array [1..50] of integer;
+var
+    t : tab ;
+    n,k : integer ;
+    Procedure saisir (var t : tab ; var n : integer ) ;
+              var
+                 i : integer ;
+              begin
+                   repeat
+                         writeln('Donner la taille du tableau');
+                         readln(n);
+                   until ( n in [10..50] ) ;
+                   For i:= 1 to n do
+                       begin
+                            
+                            t[i] := random(99)+100; 
+                       end;
+              end;
+
+    Procedure Fusion(var t : tab ; d,m,f : integer );
+              var
+                 a : tab ;
+                 n,c,i,j : integer ;   
+              begin
+                   i := d ;
+                   j := m + 1 ;
+                   n := d - 1 ;
+                   repeat
+                         n := n + 1 ; 
+                         if (t[i] < t[j]) then
+                            begin
+                                 a[n] := t[i] ;
+                                 i := i + 1 ;
+                            end
+                         else
+                             begin
+                                  a[n] := t[j] ;
+                                  j := j + 1 ; 
+                             end;      
+                   until (i > m) or (j > f);
+                   {si}
+                   if (i>m) then
+                      for c := j to f do
+                          begin
+                               n := n + 1 ;
+                               a[n] := t[c] ;
+                          end
+                   else if (j>f) then
+                        begin
+                             for c := i to m do
+                                 begin
+                                      n := n + 1 ;
+                                      a[n] := t[c];
+                                 end;
+                        end;
+                   {fin si}
+                   for i:= d to f do
+                       t[i] := a[i] ;
+              end;
+
+    Procedure Tri (var t : tab ; d,f : integer);
+              var
+                 m : integer ;
+              begin
+                   if (d < f ) then
+                     begin
+                      m:= (d+f) div 2 ;
+                      tri(t,d,m);
+                      tri(t,m+1,f);
+                      fusion(t,d,m,f);
+                     end;
+              end;
+
+    Procedure affiche(t : tab ; n : integer ) ;
+              var
+                 i : integer ;
+              begin
+                   {----------------------Affichage---------------------}
+                   for i := 1 to n do
+                       begin
+                            write(t[i],' | ');
+                       end;     
+              end;
+begin
+     saisir(t,n);
+     randomize;
+     Tri(t,1,n);
+     affiche(t,n);
+end.
+</p>
+<font style="color:lightblue"><p align="center"><b>TRI rapide</b></p></font><br>
+<font style="color:red">Definition :</font>
+<p>
+Le tri rapide consiste à choisir un élément appelé pivot et à placer ceux qui lui sont infèrieure à sa gauche et ceux qui lui sont 
+supèrieure à sa droite.On recommence ce traitement sur la partie gauche et la partie droite du tableau.
+L'élément pivot peut être le premier,le dèrnier ou le milieu.
+</p>
+<font style="color:red">Traduction en Pascal :</font>
+<p>
+Program Tri_Rapide;
+Uses wincrt;
+
+type
+    tab = array [1..50] of integer;
+var
+    t : tab ;
+    n,k : integer ;
+    Procedure saisir (var t : tab ; var n : integer ) ;
+              var
+                 i : integer ;
+              begin
+                   repeat
+                         writeln('Donner la taille du tableau');
+                         readln(n);
+                   until ( n in [10..50] ) ;
+                   For i:= 1 to n do
+                       begin
+                            
+                            t[i] := random(99)+100; 
+                       end;
+              end;
+
+    Procedure Pivot(var t : tab ; d,f : integer; var p : integer );
+              var
+                 aux,i : integer ;   
+              begin
+                   p := d ;
+                   for i:= d+1 to f do
+                       begin
+                            if (t[i] < t[d] ) then
+                               begin
+                                    p:= p+1;
+                                    aux := t[p] ;
+                                    t[p] := t[i] ;
+                                    t[i] := aux;
+                               end;
+                       end;
+                   aux  := t[d] ;
+                   t[d] := t[p] ;
+                   t[p] := aux  ;
+              end;
+
+    Procedure rapide(var t : tab ; d,f : integer);
+              var
+                 p : integer ;
+              begin
+                   if (d < f ) then
+                     begin
+                      Pivot(t,d,f,p);
+                      Rapide(t,d,p-1);
+                      Rapide(t,p+1,f);
+                     end;
+              end;
+
+    Procedure affiche(t : tab ; n : integer ) ;
+              var
+                 i : integer ;
+              begin
+                   {----------------------Affichage---------------------}
+                   for i := 1 to n do
+                       begin
+                            write(t[i],' | ');
+                       end;     
+              end;
+begin
+     saisir(t,n);
+     randomize;
+     rapide(t,1,n);
+     affiche(t,n);
+end.
+</p>
 </pre>
 </div>
 
