@@ -5,5 +5,5 @@
 		$x= $_POST["email"];
 		echo $x;
 	?>
-</body>
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
 </html>

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!DOCTYPE html><html>
+<html>
 
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <title>Bac Informatique  | Accueil</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bac Informatique  | Accueil</title>
-
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <link href="css/animate.css" rel="stylesheet" type="text/css"/>
  <link rel="stylesheet" href="css/bootstrap.min.css">
  <script src="js/jquery.min.js"></script>
@@ -47,5 +46,5 @@
 </div>
 
 
-</body>
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
 </html>
