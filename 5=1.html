@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Pascal | La conversion entre bases de numeration</title>
+<title>Pascal | Calcul du facoriel</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/animate.css" rel="stylesheet" type="text/css">
@@ -26,7 +26,7 @@
 <body>
 
 <div id="header" class="top">
-<h2  id="menu-toggle"><marquee>La conversion entre bases de numeration</marquee></h2>
+<h2  id="menu-toggle"><marquee>Calcul du facoriel</marquee></h2>
 </div>
 
  <!-- Sidebar -->
@@ -36,22 +36,22 @@
                 <li class="sidebar-brand">
                 </li>
                 <li>
-                    <a href="6-1.html">Calcul du facoriel</a>
+                    <a href="5=1.html">Calcul du facoriel</a>
                 </li>
                 <li>
-                    <a href="6-2.html">Calcul du PGCD et du PPCM</a>
+                    <a href="5=2.html">Calcul du PGCD et du PPCM</a>
                 </li>
                 <li>
-                    <a href="6-3.html">La conversion entre bases de numeration</a>
+                    <a href="5=3.html">La conversion entre bases de numeration</a>
                 </li>
                 <li>
-                    <a href="6-4.html">La décomposition en facteurs premiers</a>
+                    <a href="5=4.html">La décomposition en facteurs premiers</a>
                 </li>
                 <li>
-                    <a href="6-5.html">Les nombres premiers</a>
+                    <a href="5=5.html">Les nombres premiers</a>
                 </li>
                 <li>
-                    <a href="3eme.html">Précédent</a>
+                    <a href="courspascal.html">Précédent</a>
                 </li>
                 <li>
                     <a href="aide.html">Aide</a>
@@ -62,11 +62,22 @@
 <!-- /sidebar -->
 
 <div id="section">
-<font style="color:red"><h2>Définition:</h2></font>
-<p>Convertir un entier positif N dans une base b au moins égale à 2 consiste à chercher la représentation de N dans la base b. 
-En effet, dans un système de numération b, tout entier positif N admet une et une seule décomposition : 
-N = anbn + an-1bn-1 + an-2bn-2 + … + a1b + a0 où les ak sont des naturels compris entre 0 et (b-1) inclus. b est appelée base de numération.</p>
-<br>
+<p>n! = 1*2*3*4*5*6*.....*n</p>
+
+<font style="color:red"><h2>Traduction en Pascal:</h2></font>
+<pre><p>
+Function facoriel (n:integer): extented;
+   var f:extented ;
+       i:integer ;
+   begin	   
+    f := 1;
+	For i:= 1 to n do
+	 begin
+	 f := f * i ;
+     end;
+	factoriel := f ;
+   end;
+   </p></pre>
 </div>
 
  

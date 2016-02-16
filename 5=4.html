@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Pascal | La conversion entre bases de numeration</title>
+<title>Pascal | La décomposition en facteurs premiers</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/animate.css" rel="stylesheet" type="text/css">
@@ -26,7 +26,7 @@
 <body>
 
 <div id="header" class="top">
-<h2  id="menu-toggle"><marquee>La conversion entre bases de numeration</marquee></h2>
+<h2  id="menu-toggle"><marquee>La décomposition en facteurs premiers</marquee></h2>
 </div>
 
  <!-- Sidebar -->
@@ -36,22 +36,22 @@
                 <li class="sidebar-brand">
                 </li>
                 <li>
-                    <a href="6-1.html">Calcul du facoriel</a>
+                    <a href="5=1.html">Calcul du facoriel</a>
                 </li>
                 <li>
-                    <a href="6-2.html">Calcul du PGCD et du PPCM</a>
+                    <a href="5=2.html">Calcul du PGCD et du PPCM</a>
                 </li>
                 <li>
-                    <a href="6-3.html">La conversion entre bases de numeration</a>
+                    <a href="5=3.html">La conversion entre bases de numeration</a>
                 </li>
                 <li>
-                    <a href="6-4.html">La décomposition en facteurs premiers</a>
+                    <a href="5=4.html">La décomposition en facteurs premiers</a>
                 </li>
                 <li>
-                    <a href="6-5.html">Les nombres premiers</a>
+                    <a href="5=5.html">Les nombres premiers</a>
                 </li>
                 <li>
-                    <a href="3eme.html">Précédent</a>
+                    <a href="courspascal.html">Précédent</a>
                 </li>
                 <li>
                     <a href="aide.html">Aide</a>
@@ -62,11 +62,31 @@
 <!-- /sidebar -->
 
 <div id="section">
-<font style="color:red"><h2>Définition:</h2></font>
-<p>Convertir un entier positif N dans une base b au moins égale à 2 consiste à chercher la représentation de N dans la base b. 
-En effet, dans un système de numération b, tout entier positif N admet une et une seule décomposition : 
-N = anbn + an-1bn-1 + an-2bn-2 + … + a1b + a0 où les ak sont des naturels compris entre 0 et (b-1) inclus. b est appelée base de numération.</p>
+<pre>
+<font style="color:red"><h2>Définition: </h2></font>
+<p>Décomposer un entier en facteur premier c'est à dire l'écrire sous la forme de produit de ces facteurs premier.</p>
 <br>
+<font style="color:red"><h2>Traduction en Pascal:</h2></font>
+<p>Function Fact_premier ( n : integer) : string ;
+var i : integer ;
+ch,ch2,ch2 : string;
+begin
+ i := 2 ;
+ ch := '' ;
+  repeat 
+   if ( n mod i ) = 0 then 
+    begin
+     str(i,ch2);
+     ch := ch + ch2 + '*' ;
+     n := n div i
+    end;	  
+   else
+    i := i + 1 ;	 
+  until ( n = 1 );
+Fact_premier := ch ;
+end;</p>
+<br>
+</pre>
 </div>
 
  
