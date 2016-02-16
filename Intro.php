@@ -1,8 +1,9 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html>
 
 <head>
-
-<title>Pascal | Exercices</title>
+<title>Pascal | Intro</title>
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initiale-scale=1.0">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="css/animate.css" rel="stylesheet" type="text/css">
@@ -13,18 +14,17 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.js"></script>
 
-			<style>
-				#section{
-					padding-left:0%;
-				}
-			</style>
-
+		<style>
+			#section{
+				padding-left:0%;
+			}
+		</style>
 </head>
 
 <body>
 
 <div id="header" class="top">
-    <h2 class="animated bounceInRight" id="menu-toggle" >Exercices</h2>
+    <h2 class="animated bounceInRight" id="menu-toggle" >Intro</h2>
 </div>
 
 <!-- Sidebar -->
@@ -39,7 +39,7 @@
                 </li>
 				<li>
                     <a href="Intro.php">Intro</a>
-                </li>
+                </li>				
                 <li>
                     <a href="courspascal.html">Cours Pascal</a>
                 </li>
@@ -47,13 +47,14 @@
                     <a href="exercicepascal.html">Exercices Pascal</a>
                 </li>
                 <li>
-                    <a href="3eme.html">3eme Année</a>
+                    <a href="3eme.html">3eme AnnÃ©e</a>
                 </li>
             </ul>
         </div>
     </div>
 <!-- /sidebar -->
 
+		
 <!--//Barbarian-->		
 		<div id="nav">
 			<div id="menu">
@@ -61,30 +62,8 @@
 		</div>
 <!--Barbarian//-->	
 
-<!--  Images  -->
-<table>
-	<tr>
-		<td>
-			<div id="section">
-				<center>
-					<a href="chapIex.html"><img src="img/chap 1.jpg"></a>
-					<a href="chapIIex.html"><img src="img/chap 2.jpg"></a>
-					<a href="chapIIIex.html"><img src="img/chap 3.jpg"></a>
-					<a href="chapIVex.html"><img src="img/chap 4.jpg"></a>
-					<a href="chapVex.html"><img src="img/chap 5.jpg"></a>
-					<a href="chapVIex.html"><img src="img/chap 6.jpg"></a>
-					<a href="chapVIIex.html"><img src="img/chap 7.jpg"></a>
-				</center>
-			</div>
-		</td>
-	</tr>
-</table>
-<!--  /Images  -->
 
-<script>
-    $("#menu-toggle").click(function(e) {
-        $("#wrapper").toggleClass("toggled");
-    });
-</script>
+
+
 <script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
 </html>
