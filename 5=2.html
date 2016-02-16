@@ -54,6 +54,9 @@
                     <a href="5=5.html">Les nombres premiers</a>
                 </li>
                 <li>
+                    <a href="5=6.html">Calcul de A<sup>p</sup><sub>n</sub> et C<sup>p</sup><sub>n</sub></a>
+                </li>				
+                <li>
                     <a href="courspascal.html">Précédent</a>
                 </li>
                 <li>
@@ -70,39 +73,58 @@
 <p>Le plus grand commun diviseur de deux entiers a et b appelé aussi PGCD est le plus grand entier permettant de diviser a et b. On le note PGCD (a,b).
 </p>
 <br><pre>
-Function  PGCD_EUCLIDE (A,B:integer):integer;
-var r: integer;
+Function PGCD_DEUCLIDE_ITERATIVE (A,B:integer):integer;
+var 
+	r : integer ;
 begin
-	while b<>0 do
+	while ( (a mod b) <> 0 ) do
 		begin
 			r := a mod b ;
 			a := b ;
 			b := r ;
 		end;
-	PGCD_EUCLIDE := a ;
+	PGCD_EUCLIDE := b ;
 end;
-
-
-Function  PGCD_DIFFERENCE (A,B:integer):integer;
-var r: integer;
+Function PGCD_EUCLIDE_RECURSIVE (A,B:integer):integer;
 begin
-	while b<>a do
-		if a>b then
+	If ( a mod b = 0) then
+		PGCD := b 
+	else
+		PGCD := PGCD(b,a mod b);
+end;
+<hr>
+Function  PGCD_DIFFERENCE_ITERATIVE (A,B:integer):integer;
+var 
+	r : integer;
+begin
+	while (b <> a) do
+		if (a > b)then
 			a := a - b 
 		else
 			b := b - a ;
 	PGCD_DIFFERENCE := a ;
-end;</pre>
+end;
+Function  PGCD_DIFFERENCE_RECURSIVE (A,B:integer):integer;
+begin 
+	If (a=b) then
+		PGCD := a ;
+	else if (a > b) then
+		PGCD := PGCD(a-b,b)
+	else
+		PGCD := PGCD(a,b-a);
+end;
+</pre>
 <font style="color:red"><h2>PPCM</h2></font>
 <p>Le plus petit commun multiple de deux entiers a et b appelé aussi PPCM est le plus petit entier multiple à la fois de a et de b. On le note PPCM (a,b).
 </p>
 <br><pre>
-function PPCM ( A,B : integer): integer ;
-var max,min : integer ;
+Function PPCM_ITERATIVE ( a,b : integer): integer ;
+var 
+	max,min : integer ;
 begin
 	if a > b then 
 		begin
-			max := A ;
+			max := a ;
 			min := b ;
 		end
 	else
@@ -115,6 +137,15 @@ begin
 			max := max + ( a + b - min );
 		end ;
 	PPCM := max ;
+end ;
+Function PPCM_RECURSIVE ( a,b,max,min : integer): integer ;
+Begin
+	If (max mod min = 0) then
+		PPCM := max 
+	else if (a>b) then
+		PPCM := PPCM(a,b,max+a,min)
+	else
+		PPCM := PPCM(a,b,max+b,min);
 end ;
 </pre>
 </div>

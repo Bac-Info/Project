@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Pascal | La décomposition en facteurs premiers</title>
+<title>Pascal | Calcul de A<sup>p</sup><sub>n</sub> et C<sup>p</sup><sub>n</sub></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/animate.css" rel="stylesheet" type="text/css">
@@ -20,13 +20,16 @@
     font-size:18px;
 	font-family: monospace;
 }
+#section pre{
+	font-size:20px;
+}
 </style>
 </head>
 
 <body>
 
 <div id="header" class="top">
-<h2  id="menu-toggle"><marquee>La décomposition en facteurs premiers</marquee></h2>
+<h2  id="menu-toggle"><marquee>Calcul de A<sup>p</sup><sub>n</sub> et C<sup>p</sup><sub>n</sub></marquee></h2>
 </div>
 
  <!-- Sidebar -->
@@ -65,30 +68,11 @@
 <!-- /sidebar -->
 
 <div id="section">
-<pre>
+
 <font style="color:red"><h2>Définition: </h2></font>
-<p>Décomposer un entier en facteur premier c'est à dire l'écrire sous la forme de produit de ces facteurs premier.</p>
-<br>
-<font style="color:red"><h2>Traduction en Pascal:</h2></font>
-<p>Function Fact_premier ( n : integer) : string ;
-var i : integer ;
-ch,ch2,ch2 : string;
-begin
- i := 2 ;
- ch := '' ;
-  repeat 
-   if ( n mod i ) = 0 then 
-    begin
-     str(i,ch2);
-     ch := ch + ch2 + '*' ;
-     n := n div i
-    end;	  
-   else
-    i := i + 1 ;	 
-  until ( n = 1 );
-Fact_premier := ch ;
-end;</p>
-<br>
+<p>.</p>
+<br><pre>
+
 </pre>
 </div>
 

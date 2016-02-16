@@ -54,6 +54,9 @@
                     <a href="5=5.html">Les nombres premiers</a>
                 </li>
                 <li>
+                    <a href="5=6.html">Calcul de A<sup>p</sup><sub>n</sub> et C<sup>p</sup><sub>n</sub></a>
+                </li>				
+                <li>
                     <a href="courspascal.html">Précédent</a>
                 </li>
                 <li>
@@ -69,10 +72,11 @@
 <font style="color:red"><h2>Définition: </h2></font>
 <p>Un entier  supérieur à 1 est dit premier s’il n’est divisible que par 1 et par lui même.</p>
 <br><pre>
-function Premier ( n :integer ) : boolean ;
-var i : integer ;
+function Premier ( n : integer ) : boolean ;
+var 
+	i : integer ;
 begin
-	i:=2 ; 
+	i := 2 ; 
 	while (n mod i <> 0 ) and ( i <= n div 2 ) do
 		begin
 			i := i + 1 ;
