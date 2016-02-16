@@ -21,13 +21,22 @@
 	font-family: monospace;
 	margin-top:0px
 }
-pre{
-	font-size:19px;
+h3{
+	color : red;
+	font-weight : bold;
 }
-h2{
-	color:red;
-	font-size:25px;
-	font-family:arial,serif;
+#section pre{
+	display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 19px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: rgba(0, 0, 0, 0.09);
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 </style>
 </head>
@@ -69,10 +78,10 @@ h2{
 
 <div id="section">
 	<p>Un algorithme, en langage formel, de construction du triangle de Pascal peut se présenter comme suit, en utilisant la relation de récurrence entre coefficients binomiaux:</p>
-<h2><p>Variables :</p></h2>
+<h3><p>Variables :</p></h3>
 	<p>Tableau de 1 à X de tableau de 1 à X d'entiers c (tableau bidimensionnel)
 	Entiers i, j, n, x</p>
-<h2><p>Traduction en Pascal:</p></h2><pre>
+<h3><p>Traduction en Pascal:</p></h3><pre>
 	n := 10    (* n est inférieur ou égal à la taille X utilisée dans le tableau c *)
 	c[0][0] := 1
 
@@ -84,7 +93,7 @@ h2{
 			 c[i][i] := 1
 		finpour
 		Le résultat d'un tel programme nous donnerait ainsi pour n = 23
-</pre><pre>
+</pre><pre classe=part>
 
                                                                     1
                                                                    1 1
