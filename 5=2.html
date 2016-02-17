@@ -39,7 +39,7 @@
                 <li class="sidebar-brand">
                 </li>
                 <li>
-                    <a href="5=1.html">Calcul du facoriel</a>
+                    <a href="5=1.html">Calcul du factorielle</a>
                 </li>
                 <li>
                     <a href="5=2.html">Calcul du PGCD et du PPCM</a>
@@ -83,14 +83,14 @@ begin
 			a := b ;
 			b := r ;
 		end;
-	PGCD_EUCLIDE := b ;
+	PGCD_EUCLIDE_ITERATIVE := b ;
 end;
 Function PGCD_EUCLIDE_RECURSIVE (A,B:integer):integer;
 begin
 	If ( a mod b = 0) then
-		PGCD := b 
+		PGCD_EUCLIDE_RECURSIVE := b 
 	else
-		PGCD := PGCD(b,a mod b);
+		PGCD_EUCLIDE_RECURSIVE := PGCD_EUCLIDE_RECURSIVE(b,a mod b);
 end;
 <hr>
 Function  PGCD_DIFFERENCE_ITERATIVE (A,B:integer):integer;
@@ -102,16 +102,16 @@ begin
 			a := a - b 
 		else
 			b := b - a ;
-	PGCD_DIFFERENCE := a ;
+	PGCD_DIFFERENCE_ITERATIVE := a ;
 end;
-Function  PGCD_DIFFERENCE_RECURSIVE (A,B:integer):integer;
+Function PGCD_DIFFERENCE_RECURSIVE (A,B:integer):integer;
 begin 
 	If (a=b) then
-		PGCD := a ;
+		PGCD_DIFFERENCE_RECURSIVE := a ;
 	else if (a > b) then
-		PGCD := PGCD(a-b,b)
+		PGCD_DIFFERENCE_RECURSIVE := PGCD_DIFFERENCE_RECURSIVE(a-b,b)
 	else
-		PGCD := PGCD(a,b-a);
+		PGCD_DIFFERENCE_RECURSIVE := PGCD_DIFFERENCE_RECURSIVE(a,b-a);
 end;
 </pre>
 <font style="color:red"><h2>PPCM</h2></font>
@@ -136,16 +136,16 @@ begin
 		begin
 			max := max + ( a + b - min );
 		end ;
-	PPCM := max ;
+	PPCM_ITERATIVE := max ;
 end ;
 Function PPCM_RECURSIVE ( a,b,max,min : integer): integer ;
 Begin
 	If (max mod min = 0) then
-		PPCM := max 
+		PPCM_RECURSIVE := max 
 	else if (a>b) then
-		PPCM := PPCM(a,b,max+a,min)
+		PPCM_RECURSIVE := PPCM_RECURSIVE(a,b,max+a,min)
 	else
-		PPCM := PPCM(a,b,max+b,min);
+		PPCM_RECURSIVE := PPCM_RECURSIVE(a,b,max+b,min);
 end ;
 </pre>
 </div>

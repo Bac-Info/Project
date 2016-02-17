@@ -39,7 +39,7 @@
                 <li class="sidebar-brand">
                 </li>
                 <li>
-                    <a href="5=1.html">Calcul du facoriel</a>
+                    <a href="5=1.html">Calcul du factorielle</a>
                 </li>
                 <li>
                     <a href="5=2.html">Calcul du PGCD et du PPCM</a>
@@ -69,11 +69,38 @@
 
 <div id="section">
 
-<font style="color:red"><h2>Définition: </h2></font>
-<p>.</p>
-<br><pre>
+<font style="color:Orange"><h2>La combinaison: </h2></font>
+<p>Soit E un ensemble fini de cardinal n et p un entier naturel. Les combinaisons de cet ensemble sont ses sous-ensembles (ou ses parties). 
+Une p-combinaison de E (ou p-combinaison sans répétition de E, ou encore combinaison sans répétition de n éléments pris p à p) est une partie à p éléments de E.
+On utilise la formule suivante : C<sup>p</sup><sub>n</sub> = n!/((n-p)!p!)</p>
+<font style="color:Orange"><h2>Algorithme:<h2></font>
+	<pre>
+0)Def fn Comb( n,p : integer ) : integer
+1)C := Fact(n)/( Fact(n-p)*Fact(p) )
+2)Comb := C
+3)Fin Comb
+<Hr>
+<a href='5=1.html' style='color:yellow'>Voir fonction factorielle</a>
+	</pre>
+	
+<font style="color:Orange"><h2>L'arrangement: </h2></font>
+	<p>
+Lorsque nous choisissons p objets parmi n objets et que l’ordre dans lequel les objets sont sélectionnés revêt une importance, 
+nous pouvons les représenter par un p-uplet d'éléments distincts et on en constitue une liste ordonnée sans répétition possible, 
+c'est-à-dire dans laquelle l'ordre des éléments est pris en compte (si l'on permute deux éléments de la liste, on a une liste différente, 
+et un élément ne peut être présent qu'une seule fois).
+On utilise la formule suivante : A<sup>p</sup><sub>n</sub> = n!/((n-p)!)
+	</p>
+<font style="color:Orange"><h2>Algorithme:<h2></font>
+	<pre>
+0)Def fn Arr( n,p : integer ) : integer
+1)A := Fact(n)/Fact(n-p)
+2)Arr := A
+3)Fin Arr
+<Hr>
+<a href='5=1.html' style='color:yellow'>Voir fonction factorielle</a>
+	</pre>
 
-</pre>
 </div>
 
  
