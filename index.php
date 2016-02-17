@@ -11,7 +11,17 @@
  <script src="js/bootstrap.min.js"></script>
 
 <link href="css/home.css" rel="stylesheet" type="text/css">
-
+<style>
+.navbar-nav>li>a {
+    line-height: 20px;
+    padding-left: 60px;
+}
+.navbar-nav {
+    padding-left: 250px;
+    margin-bottom: 0;
+    list-style: none;
+}	
+</style>
 </head>
 
 
