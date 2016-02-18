@@ -74,23 +74,24 @@ h3{
 <!-- /sidebar -->
 
 <div id="section">
-	<p>Un algorithme, en langage formel, de construction du triangle de Pascal peut se présenter comme suit, en utilisant la relation de récurrence entre coefficients binomiaux:</p>
-<h3><p>Variables :</p></h3>
-	<p>Tableau de 1 à X de tableau de 1 à X d'entiers c (tableau bidimensionnel)
-	Entiers i, j, n, x</p>
-<h3><p>Traduction en Pascal:</p></h3><pre>
-	n := 10    (* n est inférieur ou égal à la taille X utilisée dans le tableau c *)
-	c[0][0] := 1
-
-		pour i de 1 à n faire
-			 c[i][0] := 1
-			 pour j de 1 à i-1 faire
-				  c[i][j] := c[i-1][j-1] + c[i-1][j]
-			 finpour
-			 c[i][i] := 1
-		finpour
-		Le résultat d'un tel programme nous donnerait ainsi pour n = 23
-</pre><pre>
+<p>Un algorithme, en langage formel, de construction du triangle de Pascal peut se présenter comme suit, en utilisant la relation de récurrence entre coefficients binomiaux:</p>
+<h3><p>Algorithme:</p></h3>
+<pre>
+0)Def Proc Remplir_Triangle(var m:mat ; var n:entier)
+1)Repeter
+	n = Donnée
+  Jusqu'à n dans [3..49]	
+2)m[1,1] := 1
+  Pour i de 2 à n faire
+	m[i,1] := 1
+	m[i,i] := 1
+	Pour j de 2 à i-1 faire
+		m[i,j] := m[i-1,j] + m[i-1,j-1]
+	Fin pour	
+  Fin pour
+3)Fin Proc Remplir_Triangle.  
+</pre>
+<pre>
 
                                                                     1
                                                                    1 1
