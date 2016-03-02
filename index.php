@@ -11,26 +11,33 @@
  <script src="js/bootstrap.min.js"></script>
 
 <link href="css/home.css" rel="stylesheet" type="text/css">
-
+<style>
+.navbar-nav>li>a {
+    line-height: 20px;
+    padding-left: 60px;
+}
+.navbar-nav {
+    padding-left: 250px;
+    margin-bottom: 0;
+    list-style: none;
+}	
+</style>
 </head>
 
 
 <body>
 	<img src="img/Banner.jpg" width="1118" height="634" name="bg" id="bg">
 	
-	<!--Begin nav -->
+<!--Begin nav -->
 <nav class="navbar navbar-fixed-top navbar-default ">
   <div class="container">
 
     <div class="abc">
       <ul class="nav navbar-nav" >
         <li><a href="courspascal.html">		<font style="color:#a00a0f;">C</font>ours Pascal</a></li>
-        <li><a href="exercicepascal.html">		<font style="color:#a00a0f;">E</font>xercices Pascal</a></li>
         <li><a href="js.html">	<font style="color:#a00a0f;">J</font>ava Script</a></li>
         <li><a href="Php.html">			<font style="color:#a00a0f;">P</font>hp</a></li>
-		<li><a href="3eme.html">				<font style="color:#a00a0f;">3<sup>ème</sup></font> Année</a></li>
-		<li><a href="aide.html">				<font style="color:#a00a0f;">A</font>ide</a></li>
-      </ul>
+	  </ul>
     </div>
   </div>
 </nav>

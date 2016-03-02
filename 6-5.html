@@ -20,13 +20,16 @@
     font-size:18px;
 	font-family: monospace;
 }
+#section pre{
+	font-size:20px;
+}
 </style>
 </head>
 
 <body>
 
 <div id="header" class="top">
-<h1  id="menu-toggle"><marquee>Les nombres premiers</marquee></h1>
+<h2  id="menu-toggle"><marquee>Les nombres premiers</marquee></h2>
 </div>
 
  <!-- Sidebar -->
@@ -36,7 +39,7 @@
                 <li class="sidebar-brand">
                 </li>
                 <li>
-                    <a href="6-1.html">Calcul du facoriel</a>
+                    <a href="6-1.html">Calcul du factorielle</a>
                 </li>
                 <li>
                     <a href="6-2.html">Calcul du PGCD et du PPCM</a>
@@ -62,10 +65,20 @@
 <!-- /sidebar -->
 
 <div id="section">
-<pre>
+
 <font style="color:red"><h2>Définition: </h2></font>
 <p>Un entier  supérieur à 1 est dit premier s’il n’est divisible que par 1 et par lui même.</p>
-<br>
+<br><pre>
+function Premier ( n :integer ) : boolean ;
+var i : integer ;
+begin
+	i:=2 ; 
+	while (n mod i <> 0 ) and ( i <= n div 2 ) do
+		begin
+			i := i + 1 ;
+		end;
+	premier := (i > n div 2) ;
+end; 
 </pre>
 </div>
 

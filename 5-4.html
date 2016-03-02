@@ -19,15 +19,24 @@
 #section p{
     font-size:19px;
 	font-family: monospace;
-	margin-top:-25px
+	margin-top:0px
 }
-pre{
-	font-size:19px;
+h3{
+	color : red;
+	font-weight : bold;
 }
-h2{
-	color:red;
-	font-size:25px;
-	font-family:arial,serif;
+#section pre{
+	display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 19px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: rgba(0, 0, 0, 0.09);
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 </style>
 </head>
@@ -35,7 +44,7 @@ h2{
 <body>
 
 <div id="header" class="top">
-<h1  id="menu-toggle"><marquee>Triangle de Pascal</marquee></h1>
+<h2  id="menu-toggle"><marquee>Triangle de Pascal</marquee></h2>
 </div>
 
  <!-- Sidebar -->
@@ -69,10 +78,10 @@ h2{
 
 <div id="section">
 	<p>Un algorithme, en langage formel, de construction du triangle de Pascal peut se présenter comme suit, en utilisant la relation de récurrence entre coefficients binomiaux:</p>
-<h2>Variables :</h2>
+<h3><p>Variables :</p></h3>
 	<p>Tableau de 1 à X de tableau de 1 à X d'entiers c (tableau bidimensionnel)
 	Entiers i, j, n, x</p>
-<h2>Traduction en Pascal:</h2><pre>
+<h3><p>Traduction en Pascal:</p></h3><pre>
 	n := 10    (* n est inférieur ou égal à la taille X utilisée dans le tableau c *)
 	c[0][0] := 1
 
@@ -84,7 +93,7 @@ h2{
 			 c[i][i] := 1
 		finpour
 		Le résultat d'un tel programme nous donnerait ainsi pour n = 23
-</pre><pre>
+</pre><pre classe=part>
 
                                                                     1
                                                                    1 1
@@ -107,9 +116,6 @@ h2{
                          1 18 153 816 3060 8568 18564 31824 43758 48620 43758 31824 18564 8568 3060 816 153 18 1 
                      1 19 171 969 3876 11628 27132 50388 75582 92378 92378 75582 50388 27132 11628 3876 969 171 19 1 
               1 20 190 1140 4845 15504 38760 77520 125970 167960 184756 167960 125970 77520 38760 15504 4845 1140 190 20 1 
-          1 21 210 1330 5985 20349 54264 116280 203490 293930 352716 352716 293930 203490 116280 54264 20349 5985 1330 210 21 1 
-      1 22 231 1540 7315 26334 74613 170544 319770 497420 646646 705432 646646 497420 319770 170544 74613 26334 7315 1540 231 22 1 
-1 23 253 1771 8855 33649 100947 245157 490314 817190 1144066 1352078 1352078 1144066 817190 490314 245157 100947 33649 8855 1771 253 23 1
 </pre>
 </div>
 
