@@ -1,0 +1,38 @@
+
+/*width 1080 / height 1920 px*/
+/*1080 : 2 difference*/
+/*1440 : 1.5 difference*/
+
+.menu {
+    overflow-x:hidden;
+	float:left;
+	position:relative;
+	left:0;
+}
+
+.menu-open {
+    left:16.5%;
+}
+
+.menu-open .menu-side {
+    left:0;
+}
+
+.menu-side,
+.menu {
+    -webkit-transition: left 0.2s ease;
+	-moz-transition: left 0.2s ease;
+	transition: left 0.2s ease;
+}
+
+.menu-side {
+    background-color:#333;
+	border-right:1px solid #000;
+	color:#fff;
+	position:fixed;
+	top:0;
+	left: -16.5%;
+	width: 14.5%;
+	height: 100%;
+	padding: 10px;
+}

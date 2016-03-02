@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slide out menu</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<meta name="viewpoint" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="menu">
+
+<header>
+<a href="#" class="menu-toggle">Toggle</a>
+<nav class="menu-side">
+Side
+Side
+Side
+<div id="nav">
+<div id="menu">
+<a href="accueil.html">Accueil</a><br><br>
+<a href="cours Pascal.html">Cours Pascal</a><br>
+<a href="exercice Pascal.html">Exercices Pascal</a><br><br>
+<a href="cours Java Script.html">Cours Java Script</a><br>
+<a href="exercice Java Script.html">Exercices Java Script</a><br><br>
+<a href="cours Php.html">Cours Php</a><br>
+<a href="exercice Php.html">Exercices Php</a><br><br>
+<a href="projets.html">Projets</a><br><br>
+<a href="3ème.html">3ème Année</a><br><br>
+<a href="aide.html">Aide</a><br>
+</div>
+</div>
+Side
+Side
+</nav>
+</header>
+
+<p>jgggggggggggggggggggggggggggggggggggggggggggggggggggiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaqqqqqqqqqqqqqqmmmmmmmmmmmmmxxxxxxx</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+(function() {
+    var body = $('body');
+	$('.menu-toggle').bind('click', function() {
+	    body.toggleClass('menu-open');
+		return false;
+	});
+ })();
+</script>
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>
+
