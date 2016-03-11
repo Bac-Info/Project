@@ -119,7 +119,7 @@ Convertir un entier positif N dans une base b au moins égale à 2 consiste à cher
 	Pour i de 1 à long(ch) faire
 		valeur(oct[i],a,e)
 		x := x + a * p
-		p := p * 16
+		p := p * 8
 	Fin pour
 2) C_8_10_Iterative := x
 3) Fin C_8_10_Iterative	
@@ -142,7 +142,7 @@ Convertir un entier positif N dans une base b au moins égale à 2 consiste à cher
 	</pre>		
 <font style="color:red"><h2>Conversion base 16 en base 2:</h2></font>
 	<pre>
-0) Def Fn C_16_2_Iterative ( Hex:chaine ) : entier	
+0) Def Fn C_16_2_Iterative ( Hex:chaine ) : chaine	
 1)[Bin := ""] 
 	Pour i de 1 à long(Hex) faire
 		Si (Hex[i] dans ["A".."F"]) alors
@@ -164,7 +164,7 @@ Convertir un entier positif N dans une base b au moins égale à 2 consiste à cher
 	</pre>
 <font style="color:red"><h2>Conversion base 2 en base 16:</h2></font>
 	<pre>
-0) Def Fn C_2_16_Iterative ( Hex:chaine ) : entier	
+0) Def Fn C_2_16_Iterative ( Bin:chaine ) : chaine	
 1)	Tant que (long(bin) mod 4 <> 0 ) faire
 		Bin := '0' + bin
 	Fin tant que		
