@@ -37,12 +37,12 @@ body {
 						<li><a href="#Array">Fonctions utiles pour les tableaux</a></li>
 						<li><a href="#Date">Fonctions concernant le type Date</a></li>
 						<li><a href="#PP">Passage des paramètres à une page php</a></li>
-						<li><a href="#SBD">Sauvegarde dans une base de données</a></li>
-						<li><a href="#Select">Extraction (SELECT) depuis une base de données</a></li>
-						<li><a href="#Open">Ouverture d’une page par instruction Php</a></li>						
+						<li><a href="#TBD">Traitement sur une base de données</a></li>
+						<li><a href="#Open">Ouverture d’une page par instruction Php</a></li>		
+						<li><a href="#Rem">Remarque</a></li>						
 					</ul>
 				</li>
-				<li><a href="Phpex.html">Exercices Php</a></li>
+				<li><a href="Phpex.php">Exercices Php</a></li>
 			</ul>
 		</div>
 	</div>
@@ -282,7 +282,7 @@ la résultat sera:
 Ce nombre de secondes 954241932 correspond a cette date 2000-28-03 12:12:12
 </p>
 			</pre>
-			<pre><h3 style="color:purple">strtotime($h,$min,$s,$m,$j,$y);</h3>
+			<pre><h3 style="color:purple">strtotime($dateCh);</h3>
 				<h4><b>Rôle: </b></h4><p>Essayer de lire une date au format anglais et de la transformer en timestamp.</p>
 				<h4><b>Exemple: </b></h4><p>
 $one = strtotime('10 september 2000');
@@ -291,7 +291,66 @@ echo "<br>Aujourd'hui est: ". $date = date('Y-d-m H:i:s',$one)." Le jour suivant
 la résultat sera:
 Aujourd'hui est: 2000-10-09 00:00:00 Le jour suivant est: 2000-11-09 00:00:00
 </p>
-			</pre>																																																													
+			</pre>	
+		<center><h2><a name="PP">Passage des paramètres à une page php</a></h2></center>
+			<pre><h3 style="color:purple">$_GET[$name];</h3><h3 style="color:purple">$_POST[$name];</h3></pre>		
+		<center><h2><a name="TBD">Traitement sur une base de données</a></h2></center>
+			<pre>
+				<h3 style="color:purple">Cinq étapes nécessaire:</h3>
+				<h4>
+					<ol>
+				<li>/*Se Connecter*/		mysql_connect('localhost','root','') or die('Error1') ;</li>
+				<li>/*Selectionner Une Base*/	mysql_select_db('azerty') or die ('Error2');</li>
+				<li>/*Faire la requette*/		$res = "Ecrire votre requête SQL ici" ;</li>
+				<li>/*Traitement*/			if ($what = mysql_query($res)){
+					while($ligne = mysql_fetch_array($what)){
+						echo "$ligne[Colonne1] $ligne[Colonne2] ..." ;
+					}
+				}</li>
+				<li>/*Fermer la base */		mysql_close();</li>
+					</ol>
+				</h4>	
+				<h3 style="color:purple">Autres fonctions utiles:</h3>	
+				<h4>
+					<ul>
+				<li>//Format UTF-8
+		echo &ltmeta http-equiv='content-type' content='text/html;charset=utf-8'/&gt
+				</li>	
+				<li>//Afficher la liste des bases existant
+		echo "Les bases de données existant sont:&ltbr&gt";
+		$result = mysql_list_dbs();
+		$num = mysql_num_rows($result);
+		for ($i=0; $i&lt $num; $i++){
+			echo "&ltli&gt".mysql_db_name($result,$i)."&ltbr&gt";
+		}	
+				</li>
+				<li>//Le nombre des colonnes affectées
+		echo "Le nombre des colonnes affectées sont: ".mysql_affected_rows()."&ltbr&gt";
+				</li>	
+				<li>//Créer une base de donnée 
+		mysql_create_db($base,$id);
+				</li>	
+					</ul>
+				</h4>
+			</pre>		
+		<center><h2><a name="Open">Ouverture d’une page par instruction Php</a></h2></center>
+			<pre><h3 style="color:purple">header("location:$URL")</h3></pre>
+		<center><h2><a name="Rem">Remarque:</a></h2></center>
+			<pre><h3 style="color:purple">Script permettant d'insérer automatiquement des options dans une liste déroulante 
+depuis une table d'une base( A mettre dans la partie BODY après &lt/Select&gt)</h3>
+				<h4>
+			<ul>
+				<li>mysql_connect('localhost','root','') or die('Error1') ;</li>
+				<li>mysql_select_db('azerty') or die ('Error2');</li>
+				<li>$res = "SELECT colonne FROM table" ;</li>
+				<li>if ($what = mysql_query($res)){
+	while($ligne = mysql_fetch_array($what)){
+		echo "&ltoption&gt$ligne[Colonne1]&lt/option&gt" ;
+	}
+}</li>
+			</ul>
+				</h4>
+			</pre>			
 	</div>
 </div>
 <script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
