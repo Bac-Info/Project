@@ -84,7 +84,8 @@ body {
 					</h4>
 				</pre>
 		</div>
-	</div>		
+	</div>	
+</div>	
 <!------------------------------------------------------------------------------------------------>
 <center><h1><a name="Ex2">Exercice 2(Les cookies)</a></h1></center>
 <div class="line">
@@ -109,8 +110,33 @@ body {
 				</pre>
 		</div>
 	</div>	
+</div>
+<!------------------------------------------------------------------------------------------------->
+<center><h1><a name="Ex3">Exercice 3(SQL)</a></h1></center>
+<div class="line">
+
+	<div class="col-md-6 quad" style='background-color:lightblue;'>		
+		<div class="well">
+				<center><h2>testFn.php</h2></center>
+				<pre>
+					<h4>
+<embed src="http://paste.is/15188/" width="100%" height="1100" pluginspage="http://paste.is/15188/">
+					</h4>
+				</pre>
 		</div>
-	</div>		
+	</div>	
+	<div class="col-md-6 quad" style='background-color:lightblue;'>		
+		<div class="well">
+				<center><h2>testFn.PNG</h2></center>
+				<pre>
+					<h4>
+<embed src="img/testFn.PNG" width="100%" height="500">
+					</h4>
+				</pre>
+		</div>
+	</div>	
+</div>
+<!------------------------------------------------------------------------------------------------->
 <script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
 
 </html>
