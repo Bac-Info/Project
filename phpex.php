@@ -67,7 +67,7 @@ body {
 	</div>	
 	<div class="col-md-6 quad" style='background-color:lightblue;'>		
 		<div class="well">
-				<center><h2>Page.php</h2></center>
+				<center><h2>Cnx.php</h2></center>
 				<pre>
 					<h4>
 <embed src="http://paste.is/15137/" width="100%" height="725" pluginspage="http://paste.is/15137/">
@@ -77,7 +77,7 @@ body {
 	</div>		
 	<div class="col-md-6 quad" style='background-color:lightblue;'>		
 		<div class="well">
-				<center><h2>Cnx.php</h2></center>
+				<center><h2>Page.php</h2></center>
 				<pre>
 					<h4>
 <embed src="http://paste.is/15138/" width="100%" height="725" pluginspage="http://paste.is/15138/">

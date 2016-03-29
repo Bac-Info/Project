@@ -330,6 +330,9 @@ Aujourd'hui est: 2000-10-09 00:00:00 Le jour suivant est: 2000-11-09 00:00:00
 				<li>//Créer une base de donnée 
 		mysql_create_db($base,$id);
 				</li>	
+				<li>//Nettoyer la mémoire
+		mysql_free_result($res);		
+				</li>
 					</ul>
 				</h4>
 			</pre>		
