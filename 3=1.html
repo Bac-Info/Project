@@ -14,9 +14,6 @@
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
 <style>
-#nav {
-    height:1000%;
-}
 #section p{
     font-size:21px;
 	font-family: monospace;
@@ -68,10 +65,10 @@ tableau trié dans le fichier</p>
 <img src="img\bulle.gif"></img>
 <pre>
 <font style="color:red">Traduction en Pascal :</font>
-<p>program tri_tab;
+<p>program tri_bulle;
 uses wincrt; 
 type 
-     tab= array [1..25] of integer; 
+    tab = array [1..25] of integer; 
 var 
     t:tab; 
     n:integer; 
@@ -81,13 +78,13 @@ var
     i:integer; 
 begin 
  repeat 
-  writeln('donnner le nbre d''element du tableau'); 
+  writeln('Donnez N'); 
   read(n); 
  until n in [5..25];
  
- For i:=1 to n do 
+ For i := 1 to n do 
   begin 
-   writeln('donner l''element ',i); 
+   writeln('Donner la case numero: ',i); 
    read(t[i]); 
   end; 
 end; 
@@ -98,18 +95,18 @@ var
     i,x:integer; 
 begin 
  repeat 
-  verif:=true; 
+  verif := true; 
    for i := 1 to n-1 do 
     begin 
-     if t[i]>t[i+1] then 
+     if (t[i] > t[i+1] ) then 
       begin 
-       x:=t[i]; 
-       t[i]:=t[i+1]; 
-       t[i+1]:=x; 
-       verif:=false; 
+       x:= t[i]; 
+       t[i]:= t[i+1]; 
+       t[i+1]:= x; 
+       verif:= false; 
       end; 
     end; 
- until verif=true; 
+ until (verif); 
 end; 
  
 procedure affiche(n:integer; t:tab); 
@@ -133,16 +130,17 @@ END.
 <font style="color:red">Definition :</font>
 <p>Le principe du tri par insertion est d'insérer à la n-ième itération le n-ième élément à la bonne place.</p>
 <font style="color:red">Traduction en Pascal :</font>
-<p>Program triinsertion ; 
+<p>Program tri_insertion ; 
 uses wincrt ; 
 type 
-    tab=array[1..20] of integer ; 
+    tab = array[1..20] of integer ; 
 var 
- n,x,i : integer ; t: tab ; 
+ n,x,i : integer ; 
+ t : tab ; 
  
 procedure saisie (var n : integer ;var t:tab); 
 var 
-i : integer ; 
+ i : integer ; 
 Begin 
  repeat 
   writeln('saisir la taille du tableau :'); 
@@ -151,7 +149,7 @@ Begin
   For i:= 1 to n do 
    begin 
     repeat 
-     writeln('Saisir l''element ',i); 
+     writeln('Donnez la case numero : ',i); 
      readln(t[i]); 
     until t[i] > 0 ; 
    end; 
@@ -161,11 +159,11 @@ function position (t:tab ; i : integer ): integer ;
 var 
    j : integer ; 
 Begin 
- j:=0 ; 
+ j:= 0 ; 
   repeat 
-   j:=j+1 ; 
+   j:= j + 1 ; 
   until t[j] >= t[i] ; 
- position:=j ; 
+ position:= j ; 
 End; 
  
 procedure tri(var t : tab ; n:integer ); 
