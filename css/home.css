@@ -3,6 +3,7 @@ body{
 	overflow-x:hidden;
 }
 
+
 #bg{
     width:100%;
 	height:auto;
@@ -25,7 +26,7 @@ body{
 }
 
 a  {
-	font-size:2.5vmin;
+	font-size:3vmin;
 }
 
 
@@ -55,7 +56,7 @@ a  {
 #BacInformatique p {
     margin:15%;
     font-family:Brush Script MT;
-    color:#C06969;
+    color:#5194BB;
 	font-size:20vmin;
 	/*font-size:140px;*/
 	text-align:center;
@@ -64,93 +65,10 @@ a  {
 #tun p {
     margin-top:-17.7%;
     font-family:Brush Script MT;
-    color:#C06969;
+    color:#d8643d;
 	font-size:2.8vmin;
 	/*font-size:20px;*/
 	text-align:center;
 	float:right;
 	width:66.4% ;
 }
-
-
-/*@media screen and (max-width:1200px) {
-    #bg{
-	   width:100%;
-	   height:auto;
-	   z-index:-100;
-	   position:fixed;
-	   left:0px;
-	   top:0px;
-	   min-height:100%;	
-	}
-    #nav a {
-	   margin:1px;
-       font-size:115%;
-    }  
-	#BacInformatique p {
-       margin:7%;
-	   font-size:240px;
-
-    }
-}
-
-
-@media screen and (max-width:960px) {
-    #bg{
-	   width:100%;
-	   height:auto;
-	   z-index:-100;
-	   position:fixed;
-	   left:0px;
-	   top:0px;
-	   min-height:100%;	
-	}
-    #nav a {
-	   margin:1px;
-       font-size:100%;
-    }  
-	#BacInformatique p {
-       margin:10%;
-	   font-size:200px;
-    }
-}
-
-@media screen and (max-width:720px) {
-    #bg{
-	   width:100%;
-	   height:auto;
-	   z-index:-100;
-	   position:fixed;
-	   left:0px;
-	   top:0px;
-	   min-height:100%;	
-	}
-    #nav a {
-	   margin:1px;
-       font-size:100%;
-    }  
-	#BacInformatique  p {
-       margin:10%;
-	   font-size:160px;
-    }
-}
-
-@media screen and (max-width:640px) {
-    #bg{
-	   width:100%;
-	   height:auto;
-	   z-index:-100;
-	   position:fixed;
-	   left:0px;
-	   top:0px;
-	   min-height:100%;
-	}
-    #nav a {
-	   margin:1px;
-       font-size:75%;
-    }  
-	#BacInformatique  p {
-       margin:10%;
-	   font-size:130px;
-    }
-}*/

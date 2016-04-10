@@ -54,7 +54,11 @@
     </div>
 <!-- /sidebar -->
 
-		
+
+    <br><br><br><br>
+    <center><img src="img/int.jpg" width="60%" /></center>
+
+	
 <!--//Barbarian-->		
 		<div id="nav">
 			<div id="menu">
