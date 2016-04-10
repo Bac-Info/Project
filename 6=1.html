@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pascal | Les algorithmes d'approximation</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-sidebar.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+<style>
+#section p{
+    font-size:21px;
+	font-family: monospace;
+}
+font{
+	font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+
+<div id="header" class="top">
+<h2  id="menu-toggle">Les algorithmes d'approximations</h2>
+</div>
+
+<!-- Sidebar -->
+<div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <a href="6=1.html">Les algorithmes d'approximations</a>
+                </li>
+                <li>
+                    <a href="courspascal.html">Précédent</a>
+                </li>
+                <li>
+                    <a href="aide.html">Aide</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- /sidebar -->
+
+<div id="section">
+<font style="font-size: 23px ;color:lightgreen">Definition :</font>
+<p>Un algorithme d'approximation permet de chercher une valeur approchée pour des valeurs qui ne sont pas des valeurs exactes.</p>
+<font style="font-size: 23px ;color:lightgreen">Recherche d'un point fixe d une fonction f :</font>
+<pre style="font-size: 20px">
+program point_fixe ;
+uses wincrt ;
+Const eps = 1e-10 ;
+var x,xp : real ; i : integer;
+   Function f ( x : real ):real ;
+   begin
+       f := sqrt(x+1);
+   end;
+begin
+x:= 1 ;  i:=0;
+Repeat
+    xp:= x ;
+    x:= f(x);
+    i:= i +1;
+until abs( x-xp )< eps ;
+writeln('le point fixe de cette fonction est ',x,'trouvé après ',i,'iteration');
+End.
+</pre>
+
+<font style="font-size: 23px ;color:lightgreen">Point fixe dans un intervalle :</font> 
+<pre style="font-size: 20px">
+program point_fixe ;
+uses wincrt ;
+Const eps= 1e-10 ;
+var x,a,b: real ; i : integer;
+  Function f ( x : real ):real ;
+  begin
+  f:= sin(x);
+  end;
+begin
+a:= 5; b:= 10;
+Repeat
+   x:=(a+b)/2;
+    if f(a)*f(x)<0 then 
+       b:= x 
+   else 
+       A:=x;
+  i:=i+1;
+until abs( a-b )< eps ;
+writeln('le point fixe de cette fonction est ',x,'trouvé apres ',i,'iteration');
+End.
+</pre>
+
+<font style="font-size: 23px ;color:lightgreen">Calcule d'intégrale d’une fonction :</font>
+<font style="font-size: 21px ;color:lightblue">Méthode des rectangle :</font>
+<pre style="font-size: 20px">
+<img src='img\rectangle.png'></img>
+function rectangle (a,b :reel ; n : integer ) : real ;
+var  s, h, x : real;
+i: integer;
+begin
+   s:= 0; h:= (b- a) /n ;  x:= a;
+   for i := 1 to n do
+    begin
+      s:= s + h * f(x) ;
+      x:= x + h ;
+    end;
+   rectangle:= s ;
+End;
+</pre>
+
+<font style="font-size: 21px ;color:lightblue">Méthode des trapèzes :</font>
+<pre style="font-size: 20px">
+function trapezes (a,b :reel ; n : integer ) : real ;
+var  s, h, x : real;
+i: integer;
+begin
+   s:= 0; h:= (b- a) /n ;  x:= a;
+   for i := 1 to n do
+    begin
+      s:= s + (h/2) * (f(x)+ f(x+h) );
+      x:= x + h ;
+    end;
+   trapezes:= s ;
+End;
+</pre>
+
+<font style="font-size: 23px ;color:lightgreen">Calcul approché de constante connue :</font>
+<font style="font-size: 21px ;color:lightblue">Valeur approché de π par méthode de « Leonard » :</font>
+<pre style="font-size: 20px">
+Function leonard( eps : real ): real;
+var n: integer;
+s,sp:real;
+begin
+   n:= 1;  s:= 1;
+   repeat 
+      sp :=s ;
+      n:= n+1 ;
+      s:= s+ (1/n)/n;
+   until abs(s-sp)< eps ;
+leonard:=sqrt(6*s) ;
+end;
+</pre>
+	
+<font style="font-size: 21px ;color:lightblue">Valeur approché de π par méthode de « Leibniz »:</font></font> :</font>
+<pre style="font-size: 20px">
+Function Leibniz ( eps :real ) : real;
+Var   j,signe : integer ;
+terme , s: real;
+begin
+     terme := 1 ; j:= -1 ;
+     signe := -1;  s:= 0 ;
+  while ( terme >= eps ) do
+   begin
+      j:= j+2;
+      terme := 1/j 
+      signe := -1 * signe 
+      s:= s + signe * terme 
+  end;
+Leibniz := s*4 ;
+end;
+</pre>
+</div>
+
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+</html>

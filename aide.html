@@ -2,146 +2,133 @@
 <html>
 
 <head>
-<title>Pascal | Aide</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<link href="css/animate.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/simple-sidebar.css">
+  <title>Bac Info | Aide</title>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet" type="text/css">
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  
+  <!-- Generated Custom Fonts -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
 </head>
 
-<body>
+<body id="page-top" class="index">
 
-<div id="header" class="top">
-<h2 id="menu-toggle" class="animated bounceInRight">Aide</h2>
-</div>
-
-<!-- Sidebar -->
-<div id="wrapper">
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                
-                </li>
-                <li>
-                    <a href="index.php">Accueil</a>
-                </li>
-                <li>
-                    <a href="courspascal.html">Cours Pascal</a>
-                </li>
-                <li>
-                    <a href="exercicepascal.html">Exercices Pascal</a>
-                </li>
-                <li>
-                    <a href="js.html">JavaScript</a>
-                </li>
-                <li>
-                    <a href="Php.html">Php</a>
-                </li>
-                <li>
-                    <a href="3eme.html">3eme Année</a>
-                </li>
-                <li>
-                    <a href="aide.html">Aide</a>
-                </li>
-            </ul>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/logo.png" width='35%'>
+                    <div class="intro-text">
+                        <span class="name">Bac Info</span>
+                        <hr class="star-light">
+                        <span class="skills">Aide</span>
+                    </div>
+					<br><br>
+					<div id="section">
+						<b style='font-size:21px;'>Mot de passe pour les solutions des exercices</b>
+						<p><font id="mdp" color="blue"><a onclick="document.getElementById('mdp').innerHTML ='123456'">" ****** "</a></font></p>
+						<br>
+						<b style='font-size:21px;'>Telechargements</b>
+						<p><a href="ftp://ftp-developpez.com/pascal/turbo-pascal/tpw15-fr.zip">Turbo Pascal</a></p>
+						<p><a href="http://notepad-plus-plus.org/repository/6.x/6.8.3/npp.6.8.3.Installer.exe">Notepad++</a></p>
+						<p><a href="http://tinyurl.com/o4qsz5x">EasyPhP</a></p>
+					</div>
+                </div>
+            </div>
         </div>
-    </div>
-<!-- /sidebar -->
+    </header>
 
-<div id="section">
-<b>Mot de passe pour les solutions des exercices:</b><font id="mdp" color="blue"><a onclick="document.getElementById('mdp').innerHTML ='123456'">" ****** "</a></font>
-<p><b>Téléchargements:</b>
-<p><a href="ftp://ftp-developpez.com/pascal/turbo-pascal/tpw15-fr.zip">Turbo Pascal</a></p>
-<p><a href="http://notepad-plus-plus.org/repository/6.x/6.8.3/npp.6.8.3.Installer.exe">Notepad++</a></p>
-<p><a href="http://tinyurl.com/o4qsz5x">EasyPhP</a></p>
-</div>
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Contact</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Nom</label>
+                                <input type="text" class="form-control" placeholder="Nom" id="name" required data-validation-required-message="Please enter your name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Email</label>
+                                <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Numero de telephone</label>
+                                <input type="tel" class="form-control" placeholder="Numero de telephone" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Message</label>
+                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg">Envoyer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<br><br><br><br><br>
-<div>
-	
-<center>
-	<font style='font-size:1.3vw'>
-<FORM method='get' action='' name='f'>
-<TABLE BORDER="0" >
-<TR>
-	<TD>Nom & Prénom</TD>
-	<TD colspan=2>
-	<INPUT type=text name="np">
-	</TD>
-</TR>
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h3>Velzimar - COPYRIGHT Â® tous les droits sont rÃ©servÃ©s 2014-2016</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<TR>
-	<TD>Adresse electronique</TD>
-	<TD colspan=2>
-	<INPUT type=text name="email" >
-	</TD>
-</TR>
+    <!-- Contact Form -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+</body>
 
-<TR>
-	<TD>Sujet</TD>
-	<TD colspan=2>
-	<INPUT type=text name="sujet" >
-	</TD>
-</TR>
-
-<TR>
-	<TD>Message</TD>
-	<TD colspan=2>
-	<TEXTAREA rows="3" cols="18" name="msg" value="Taper Votre message" ></TEXTAREA>
-	</TD>
-</TR>
-
-<TR>
-    <TD></TD>
-	<TD>
-	<INPUT type="button" value="Envoyer" onclick='test()'>
-	</TD>
-	<TD align=right>
-	<INPUT type="submit" value="Annuler">
-	</TD>
-</TABLE>
-</font>
-</FORM>
-</center>
-</div>
-
-
-<script>
-function test() 
-{
-if ((document.f.np.value == "") || (!(isNaN(document.f.np.value))))
-	{
-		alert("Votre Nom & Prénom est incorrect");
-		document.f.np.style.borderColor = "red";
-		document.f.np.focus();
-		return;
-	}
-
-a = document.f.email.value.indexOf('@');
-p = document.f.email.value.lastIndexOf('.');
-if ((document.f.email.value == "") || (p  == -1) || (a == -1) || (p<a))
-	{
-		alert("Votre E-mail est incorrect");
-		document.f.email.style.borderColor = "red";
-		return;
-	}
-	
-if (document.f.msg.value == "")
-	{
-		alert("Saisir votre message");
-		document.f.msg.style.borderColor = "red";
-		document.f.msg.focus();
-		return;
-	}	
-	
-}
-</script>
-
-<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
 </html>
