@@ -18,6 +18,10 @@
 			#section{
 				padding-left:0%;
 			}
+			img{
+				margin-top:-20px;
+				margin-left:200px;
+			}
 		</style>
 </head>
 
@@ -56,7 +60,7 @@
 
 
     <br><br><br><br>
-    <center><img src="img/int.jpg" width="60%" /></center>
+    <center><img src="img/int.jpg" width="81%" /></center>
 
 	
 <!--//Barbarian-->		
