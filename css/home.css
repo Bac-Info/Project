@@ -21,7 +21,7 @@ body{
 }
 @font-face{
     font-family:VCR_OSD_MONO;
-	src:url("font/VCR_OSD_MONO.ttf");
+	src:url("fonts/VCR_OSD_MONO.ttf");
 }
 
 a  {
