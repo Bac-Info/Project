@@ -18,7 +18,15 @@
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+<?php
+	session_start();
+	if (isset($_SESSION['user'])==false) {	
+		echo("<script>function log(){alert('Connectez/inscrivez vous avant de continuer...')}</script>");
+	}else{
+		echo("<script>function log(){document.sentMessage.submit()}</script>");
+	}
+	
+?>
 </head>
 
 <body id="page-top" class="index">
@@ -48,19 +56,25 @@
             </div>
         </div>
     </header>
-
-    <!-- Contact -->
-    <section id="contact">
+	
+	
+	
+	
+	
+	
+	
+    <!-- Insctiption 
+    <section id="Insctiption">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Contact</h2>
+                    <h2>Insctiption</h2>
                     <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form name="Ins" id="Ins" action ="" novalidate>                                     
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Nom</label>
@@ -77,15 +91,15 @@
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Numero de telephone</label>
-                                <input type="tel" class="form-control" placeholder="Numero de telephone" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <label>Mot de passe</label>
+                                <input type="password" class="form-control" placeholder="Mot de passe" id="passwd" required data-validation-required-message="Enter un mot de passe.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
-                        <div class="row control-group">
+						<div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <label>Confirmer votre Mot de passe</label>
+                                <input type="password" class="form-control" placeholder="Confirmer votre Mot de passe" id="cpasswd" required data-validation-required-message="Enter un mot de passe.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -101,7 +115,67 @@
             </div>
         </div>
     </section>
-
+  ///////Insctiption -->
+	
+	
+	
+	
+	
+    <!-- Contact -->
+    <section id="Insctiption">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <hr class="star-primary">
+					<h2>Contact</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form name="sentMessage" id="contactForm" novalidate>                                      <!--                      ////             -->
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Sujet</label>
+                                <select class="form-control" placeholder="sujet" id="sujet" required data-validation-required-message="Please enter a message.">
+									<option>Me contacter</option>
+									<option>Proposer une nouvelle solution pour un exercice</option>
+									<option>Recommendations</option>
+									<option>Autre</option>
+								</select>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>                       
+						<div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Titre</label>
+                                <input type="text" class="form-control" placeholder="titre" id="titre" required data-validation-required-message="Please enter your name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Message</label>
+                                <textarea rows="5" class="form-control" placeholder="message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button name="btnc" type="button" class="btn btn-success btn-lg" onclick="log()" >Envoyer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- ///////Contact -->
+	
+	
+	
     <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
