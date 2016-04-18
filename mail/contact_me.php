@@ -16,7 +16,7 @@ $phone = $_POST['phone'];
 $message = $_POST['message'];
 	
 // Create the email and send the message
-$to = 'baha1000@hotmail.fr'; // email
+$to = 'hjoussema@gmail.com'; // email
 $email_subject = "Website Contact Form:  $name";
 $email_body = "Website contact form.\n\n"."More details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
 $headers = "From: root@baha.esy.es\n";

@@ -5,7 +5,8 @@
 		header('location: Inscri.php');
 	}	
 	else
-	{
+	{ 
+
 		$name = $_POST['name'];
 		$passwd = $_POST['passwd'];
 		mysql_connect('localhost','root','') or die('Error1') ;	
@@ -25,14 +26,17 @@
 				else {	$nb++; }
 			}
 		}
+
 		if ( $b==true ){
 			$_SESSION['user']=$_POST['name'];
+
 			header('location: aide.php');
 		}
 		else{
 			echo"<script>alert('Mot de passe et/ou Nom incorrect.');
-window.location = 'Inscri.php';</script>";
+						  window.location = 'Inscri.php';</script>";
 		}	
-		mysql_close();	
+
+			mysql_close();
 	}
 ?>

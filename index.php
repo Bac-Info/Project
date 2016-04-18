@@ -37,7 +37,7 @@
         <li><a href="intro.php">		<font style="color:#a00a0f;">P</font>ascal</a></li>
         <li><a href="js.html">	<font style="color:#a00a0f;">J</font>ava Script</a></li>
         <li><a href="Php.html">			<font style="color:#a00a0f;">P</font>hp</a></li>
-		<li><a href="aide.html">			<font style="color:#a00a0f;">A</font>ide</a></li>
+		<li><a href="aide.php">			<font style="color:#a00a0f;">A</font>ide</a></li>
 	  </ul>
     </div>
   </div>

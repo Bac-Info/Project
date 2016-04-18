@@ -3,8 +3,8 @@
 
 <head>
   <title>Bac Info | Inscription</title>
-  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv='content-type' content='text/html;charset=utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/animate.css" rel="stylesheet" type="text/css">
@@ -45,9 +45,50 @@
 	</style>
   <!-- Generated Custom Fonts -->
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="alert.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+<script src='alert.js'></script>		
+<script>		
+function verif(){		
+		if (( document.Insctiption.name.value == '' ) || ( document.Insctiption.name.value.length > 30 ) )
+		{
+			alert('Le Nom ne doit pas etre vide et ne depasse pas 32 caractere');
+			document.Insctiption.name.focus();
+			document.Insctiption.name.style.backgroundColor = "#BDEFB8" ;
+			return;
+		}	else{			document.Insctiption.name.style.backgroundColor = "#FFFFFF" ;}
+			
+		pa = document.Insctiption.Email.value.indexOf("@");
+		pp = document.Insctiption.Email.value.lastIndexOf(".");
+		if ( (pa === -1 )|| (pp === -1) || (pp < pa) )
+		{ 
+			alert('verifier votre Email');
+			document.Insctiption.Email.focus();
+			document.Insctiption.Email.style.backgroundColor = "#BDEFB8" ;
+			return;
+		} 	else{			document.Insctiption.Email.style.backgroundColor = "#FFFFFF" ;}
+		
+		if ( (document.Insctiption.passwd.value.length > 32)  ||  (document.Insctiption.passwd.value.length < 6)  )
+		{
+			alert("le mot de passe doit etre de taille compris entre 6 et 32");
+			document.Insctiption.passwd.value=null;
+			document.Insctiption.passwd.focus();
+			document.Insctiption.passwd.style.backgroundColor = "#BDEFB8" ;
+			return;
+		}	else{			document.Insctiption.passwd.style.backgroundColor = "#FFFFFF" ;}
+		
+		if ( document.Insctiption.cpasswd.value != document.Insctiption.passwd.value )
+		{
+			alert('Les deux mot de passe ne sont pas identique');
+			document.Insctiption.cpasswd.value=null;
+			document.Insctiption.cpasswd.focus();
+			document.Insctiption.cpasswd.style.backgroundColor = "#BDEFB8" ;
+			return;
+		}	else{			document.Insctiption.cpasswd.style.backgroundColor = "#FFFFFF" ;}
+		document.Insctiption.submit();
+}
+</script>
 </head>
 
 <body id="page-top" class="index">
@@ -66,7 +107,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <form name="Insctiption" id="Insctiption" action ="recIns.php" method="POST">                                     
+                    <form name="Insctiption" id="Insctiption" action='recIns.php' method="POST">                                     
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Nom</label>
@@ -99,7 +140,7 @@
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Envoyer</button>
+                                <button type="button" class="btn btn-success btn-lg" onclick='verif()'>Inscrire</button>
 								<button style='float:right'type="reset" class="btn btn-success btn-lg">Annuler</button>
                             </div>
                         </div>
@@ -141,7 +182,7 @@
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Connecter</button>
+                                <button type="submit" class="btn btn-success btn-lg" >Connecter</button>
 								<button style='float:right'type="reset" class="btn btn-success btn-lg">Annuler</button>
                             </div>
                         </div>
