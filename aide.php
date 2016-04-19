@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-
+<?php
+error_reporting(0);
+session_start();
+?>
 <html>
 <script>
 
@@ -16,7 +19,41 @@
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  
+<style> 
+.cl {
+    width: 1990px;
+    height: 30px;
+    background-color: red;
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 30s;
+
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 20px;
+  color:white; 	
+  text-transform: uppercase;
+  text-align:center;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+</style>
   <!-- Generated Custom Fonts -->
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -130,7 +167,7 @@
             </div>
         </div>
     </footer>
-
+<input class='cl' name="ch_texte" type="text" value="<?php echo $_SESSION['user'];  ?>" size="1080" maxlength="30" disabled="disabled" />
     <!-- Contact Form -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
