@@ -19,7 +19,35 @@ session_start();
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<style> 
+	<style>
+		.btna {
+			  background: #222729;
+			  background-image: -webkit-linear-gradient(top, #222729, #222729);
+			  background-image: -moz-linear-gradient(top, #222729, #222729);
+			  background-image: -ms-linear-gradient(top, #222729, #222729);
+			  background-image: -o-linear-gradient(top, #222729, #222729);
+			  background-image: linear-gradient(to bottom, #222729, #222729);
+			  -webkit-border-radius: 0;
+			  -moz-border-radius: 0;
+			  border-radius: 0px;
+			  font-family: Georgia;
+			  color: #27e83e;
+			  font-size: 20px;
+			  padding: 10px 20px 10px 20px;
+			  border: solid #000000 2px;
+			  text-decoration: none;
+			  margin-top : 3%;
+		}
+
+		.btna:hover {
+		  background: #ffffff;
+		  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+		  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+		  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+		  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+		  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+		  text-decoration: none;
+		}
 .cl {
     width: 1990px;
     height: 30px;
@@ -53,6 +81,11 @@ session_start();
     50%  {background-color: blue;}
     100% {background-color: green;}
 }
+header .container {
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
 </style>
   <!-- Generated Custom Fonts -->
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -65,6 +98,7 @@ session_start();
 
     <!-- Header -->
     <header>
+	<center><button class="btna" onclick="window.location='index.php'">Retourner</button></center>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

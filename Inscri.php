@@ -45,10 +45,10 @@
 	</style>
   <!-- Generated Custom Fonts -->
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="alert.css" rel="stylesheet" type="text/css">
+  <link href="css/alert.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-<script src='alert.js'></script>		
+  <script src='js/alert.js'></script>		
 <script>		
 function verif(){		
 		if (( document.Insctiption.name.value == '' ) || ( document.Insctiption.name.value.length > 30 ) )

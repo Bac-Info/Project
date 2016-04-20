@@ -26,7 +26,7 @@
 
 
 <body>
-	<img src="img/Banner.jpg" width="1118" height="634" name="bg" id="bg"draggable="false">
+	<img onselectstart="return false" src="img/Banner.jpg" width="1118" height="634" name="bg" id="bg"draggable="false">
 	
 <!--Begin nav -->
 <nav class="navbar navbar-fixed-top navbar-default" >
@@ -45,11 +45,11 @@
 <!--End nav -->
 	
 
-<div id="BacInformatique">
+<div onselectstart="return false" id="BacInformatique">
 <p class="animated wobble">Bac Informatique</p>
 </div>
 
-<div id="tun">
+<div onselectstart="return false" id="tun">
 <p class="animated wobble">Tunisie</p>
 </div>
 
