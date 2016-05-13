@@ -34,10 +34,14 @@ body {
 						<li class="active dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours JavaScript<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="#if">If..Else statement</a></li>
-								<li><a href="#do">Do..while statement</a></li>
-								<li><a href="#while">While..Do statement</a></li> 
-								<li><a href="#for">For.. statement</a></li> 
+								<li><a href="#if">If..Else </a></li>
+								<li><a href="#do">Do..while </a></li>
+								<li><a href="#while">While..Do </a></li> 
+								<li><a href="#for">For.. </a></li> 
+								<li><a href="#Switch">Switch.. </a></li> 
+								<li><a href="#Fn">Fonctions prédéfinies</a></li> 
+								<li><a href="#Evènements">Evènements</a></li> 
+								<li><a href="#Op">Opérateurs</a></li>
 							</ul>
 						</li>
         <li><a href="jsex.html">Exercices JavaScript</a></li>
@@ -47,110 +51,587 @@ body {
 </nav>
 <!--End nav -->
 
-	<div class="container">
-		<div class="well">
 
-        <!--Begin Template-->				
-<center><h2> <a name="if">if...else</a></h2></center>
-<pre><h3 style="color:purple">Exécute une série de déclarations si une condition spécifiée est vraie. 
+<div class="container">
+	<div class="well">
+		
+	<center><h2> <a name="if">if...else</a></h2></center>
+		<pre>
+				<h3 style="color:purple">Exécute une série de déclarations si une condition spécifiée est vraie. 
 Si la condition est fausse, une autre série de déclarations peut être exécutée.</h3>
-<h4><b>Syntaxe:</b></h4>
-if (condition) {
-	statements1
-}
-else {
-	statements2
-}
-
-<h4><b>Paramètres:</b></h4>
+				<h4><b>Syntaxe:</b></h4>
+	if (condition) {
+		statements1
+	}else{
+		statements2
+	}
+				<h4><b>Paramètres:</b></h4>
 Condition peut être toute expression JavaScript qui renvoie true ou false. 
 Les parenthèses sont nécessaires autour de la condition. 
 Si la condition est évaluée à true, les déclarations contenues dans "statements1" sont exécutées. 
 statements1, statements2 peut être tout instructions JavaScript, 
 y compris de nouvelles instructions IF imbriquées. Plusieurs déclarations doivent être placées entre accolades.
-<h4><b>Example:</b></h4>
-if (char == char2) {
-	result = 1;
-}
-else{
-	result = 0;
-}
-
-</pre>
-        <!--End Template-->
-
-        <!--Begin Template-->				
-<center><h2> <a name="do">do..while</a></h2></center>
-<pre><h3 style="color:purple">Exécute les instructions spécifiées jusqu'à ce que la condition de test est 
+				<h4><b>Example:</b></h4>
+	if (char == char2) {
+		result = 1;
+	}else{
+		result = 0;
+	}
+		</pre>
+		
+	<center><h2> <a name="do">do..while</a></h2></center>
+		<pre>
+				<h3 style="color:purple">Exécute les instructions spécifiées jusqu'à ce que la condition de test est 
 évaluée à false. Déclarations exécuter au moins une fois.</h3>
-<h4><b>Syntaxe:</b></h4>
-do
-statements
-while (condition);
-<h4><b>Paramètres:</b></h4>
+				<h4><b>Syntaxe:</b></h4>
+	do
+		statements
+	while (condition);
+				<h4><b>Paramètres:</b></h4>
 Évalué après chaque passage dans la boucle. Si la condition est évaluée à true, les instructions dans le 
 bloc précédent sont réexécuté. Lorsque la condition est évaluée à false, le contrôle passe à l'instruction suivante faire tout.
-<h4><b>Example:</b></h4>
+				<h4><b>Example:</b></h4>
 Dans l'exemple suivant, la boucle se faire au moins une fois et réitère que i ne soit plus inférieur à 5. 
-
-do {
-i+=1;
-document.write(i);
-} while (i<5);
-
-</pre>
-        <!--End Template-->
-
-        <!--Begin Template-->				
-<center><h2> <a name="while">while..do</a></h2></center>
-<pre><h3 style="color:purple">Crée une boucle qui évalue une expression, et si il est vrai, exécute un bloc de 
+	do {
+		i+=1;
+		document.write(i);
+	}while(i<5);
+		</pre>
+					
+	<center><h2> <a name="while">while..do</a></h2></center>
+		<pre>
+				<h3 style="color:purple">Crée une boucle qui évalue une expression, et si il est vrai, exécute un bloc de 
 déclarations.La boucle se répète alors,tant que la condition spécifiée est vraie.</h3>
-<h4><b>Syntaxe:</b></h4>
+				<h4><b>Syntaxe:</b></h4>
 while (condition) {
-statements
+	statements
 }
-<h4><b>Paramètres:</b></h4>
+				<h4><b>Paramètres:</b></h4>
 Évalués avant chaque passage dans la boucle. Si cette condition est évaluée à true, 
 les déclarations contenues dans le bloc suivant sont exécutés. Lorsque la condition est évaluée à false, 
 l'exécution se poursuit avec la déclaration suivante déclarations.
-<h4><b>Example:</b></h4>
+				<h4><b>Example:</b></h4>
 Dans l'exemple suivant, la boucle est executée tant que n est inférieur à trois. 
-
-n = 0;
-x = 0;
-while(n < 3) {
-n ++;
-x += n;
-}
-</pre>
-        <!--End Template-->
-
-        <!--Begin Template-->       
-<center><h2> <a name="for">for..</a></h2></center>
-<pre><h3 style="color:purple">Crée une boucle qui est constituée de trois expressions, en option entre 
+	n = 0;
+	x = 0;
+	while(n < 3) {
+		n ++;
+		x += n;
+	}
+		</pre>
+		  
+	<center><h2> <a name="for">for..</a></h2></center>
+		<pre>
+				<h3 style="color:purple">Crée une boucle qui est constituée de trois expressions, en option entre 
 parenthèses et séparés par des virgules, suivi d'un bloc d'instructions exécutées dans la boucle.</h3>
-<h4><b>Syntaxe:</b></h4>
+				<h4><b>Syntaxe:</b></h4>
 for ([initial-expression]; [condition]; [increment-expression]) {
-statements
+	statements
 }
-<h4><b>Paramètres:</b></h4>
+				<h4><b>Paramètres:</b></h4>
 initial-expression: Déclaration ou déclaration de variable. Généralement utilisé pour initialiser une variable compteur. 
 Cette expression peut éventuellement déclarer de nouvelles variables avec le mot-clé var. 
 Ces variables sont locales à la fonction, et non pas à la boucle. 
 condition: évalué à chaque passage dans la boucle. Si thiscondition true, les déclarations en déclarations sont effectuées. 
 Ce test conditionnel est facultative. Si omis, la condition est toujours vraie. 
 increment-expression: Généralement utilisé pour mettre à jour ou incrémenter le compteur variable.
-<h4><b>Example:</b></h4>
+				<h4><b>Example:</b></h4>
 La déclaration suivante pour départs en déclarant la variable i et l'initialiser à 0. Il vérifie que i est inférieur à neuf, 
 effectue les deux déclarations suivantes, et incrémente i de 1 après chaque passage dans la boucle. 
 
 for (var i = 0; i < 9; i++) {
-	n += i;
-	myfunc(n);
+		n += i;
+		myfunc(n);
 }
-</pre>
-		</div>
+		</pre>
+	<center><h2> <a name="Switch">Switch..</a></h2></center>
+		<pre>
+						<h3 style="color:purple">
+L'instruction switch évalue une expression et, selon le résultat obtenu et le cas associé, exécute les instructions correspondantes.
+</h3>
+				<h4><b>Syntaxe:</b></h4>
+switch (expression) {
+  case valeur1:
+    // Instructions à exécuter lorsque le résultat
+    // de l'expression correspond à valeur1
+    instructions1;
+    [break;]
+  case valeur2:
+    // Instructions à exécuter lorsque le résultat
+    // de l'expression correspond à valeur2
+    instructions 2;
+    [break;]
+  ...
+  case valeurN:
+    // Instructions à exécuter lorsque le résultat
+    // de l'expression à valeurN
+    instructionsN;
+    [break;]
+  default:
+    // Instructions à exécuter lorsqu'aucune des valeurs
+    // ne correspond 
+    instructions_def;
+    [break;]
+}
+				<h4><b>Example 2:</b></h4>	
+switch(ma_var)
+{
+     case 0:
+          alert("Vraiment nulle, cette variable"); // Elle vaut zero
+          break; 
+     case 1:
+     case 3: alert("Ma variable vaut 1 ou 3");  // Et on continue
+     case 5:
+          alert("Ma variable est impaire et comprise entre 1 et 5");
+          break;
+     case 2:
+     case 4:
+     case 6:
+          alert("Ma variable est paire et comprise entre 2 et 6");
+          break;
+     case 7:
+          alert("Ma variable est égale à 7");
+          break;          
+     default: alert("Ma variable est négative ou supérieure à 7")
+}
+				
+				
+		</pre>
+	<center><h2> <a name="Fn">Fonctions prédéfinies</a></h2></center>
+		<pre>
+				<h4><b>eval():</b></h4>
+interpréter une expression
+				<h4><b>escape():</b></h4>
+transforme des signes ASCII en nombres
+				<h4><b>isFinite():</b></h4>
+vérifie le domaine numérique de valeurs
+				<h4><b>isNaN():</b></h4>
+vérifie si la valeur n'est pas un nombre
+				<h4><b>parseFloat():</b></h4>
+transforme en nombre avec décimales
+				<h4><b>parseInt():</b></h4>
+transforme en nombre entier
+				<h4><b>Number():</b></h4>
+transforme un objet en nombre
+				<h4><b>String():</b></h4>
+transforme le contenu d'un objet en une chaîne de caractères
+				<h4><b>unescape():</b></h4>
+transforme des nombres en caractères ASCII
+				<h4><b>abs():</b></h4>
+valeur positive
+				<h4><b>acos():</b></h4>
+arc cosinus
+				<h4><b>asin():</b></h4>
+arc sinus
+				<h4><b>atan():</b></h4>
+arc tangente
+				<h4><b>ceil():</b></h4>
+nombre entier supérieur le plus proche
+				<h4><b>cos():</b></h4>
+cosinus
+				<h4><b>exp():</b></h4>
+valeur exponentielle
+				<h4><b>floor():</b></h4>
+nombre entier inférieur le plus proche
+				<h4><b>log():</b></h4>
+utilisation du logarithme naturel
+				<h4><b>max():</b></h4>
+le plus grand de deux chiffres
+				<h4><b>min():</b></h4>
+le plus petit de deux chiffres
+				<h4><b>pow():</b></h4>
+nombre puissance exposant
+				<h4><b>random():</b></h4>
+0 ou 1 aléatoire
+				<h4><b>round():</b></h4>
+arrondi commercial d'un nombre
+				<h4><b>sin():</b></h4>
+sinus
+				<h4><b>sqrt():</b></h4>
+racine carrée
+				<h4><b>tan():</b></h4>
+tangente
+				<h4><b>big():</b></h4>
+créer un grand texte
+				<h4><b>blink():</b></h4>
+créer un texte clignotant
+				<h4><b>bold():</b></h4>
+créer un texte en caractères gras
+				<h4><b>charAt():</b></h4>
+rechercher un signe à une position
+renvoie le caractère (en fait l'unité de code) situé dans la chaîne à l'offset indiqué, ou en son absence, la chaîne vide.
+				<h4><b>charCodeAt():</b></h4>
+valeur de code Latin-1 à une position
+renvoie la valeur du caractère (en fait l'unité de code) situé dans la chaîne à l'offset indiqué, ou en son absence, le nombre NaN.
+				<h4><b>concat():</b></h4>
+concaténer des chaînes de caractères
+				<h4><b>fixed():</b></h4>
+créer un texte style télex
+				<h4><b>fontcolor():</b></h4>
+créer une couleur de police
+				<h4><b>fontsize():</b></h4>
+créer une taille de police
+				<h4><b>fromCharCode():</b></h4>
+créer une chaîne de caractères en Latin 1
+créer une chaîne à partir de la liste des unités de codes numériques indiquée
+				<h4><b>indexOf():</b></h4>
+rechercher la position d'un caractère
+Recherchrche une sous chaîne à parti d'un position, et renvoie l'offset où se trouve la sous-chaîne, et -1 lorsque la sous-chaîne n'est pas trouvée.
+				<h4><b>italics():</b></h4>
+créer un texte en italique
+				<h4><b>lastIndexOf():</b></h4>
+rechercher la dernière position d'un signe
+				<h4><b>link():</b></h4>
+créer un lien
+				<h4><b>match():</b></h4>
+appliquer une expression régulière
+Renvoie vrai, faux ou nul en fonction de l'éventuelle correspondance.
+				<h4><b>replace():</b></h4>
+appliquer une expression régulière et remplacer
+				<h4><b>search():</b></h4>
+chercher avec une expression régulière
+				<h4><b>slice():</b></h4>
+extraire une partie d'une chaîne de caractères
+				<h4><b>small():</b></h4>
+créer un petit texte
+				<h4><b>split():</b></h4>
+scinder une chaîne de caractères
+				<h4><b>strike():</b></h4>
+créer un texte barré
+				<h4><b>sub():</b></h4>
+créer un texte en indice
+				<h4><b>substr():</b></h4>
+rechercher une sous-chaîne de caractères à partir d'une position
+				<h4><b>substring():</b></h4>
+rechercher une sous-chaîne de caractères
+				<h4><b>sup():</b></h4>
+créer un texte en exposant
+				<h4><b>toLowerCase():</b></h4>
+tout écrire en minuscules
+Renvoie une chaîne ou chaque caractère BMP a été converti en minuscule. Les surrogates ne sont pas modifiés.
+				<h4><b>toUpperCase():</b></h4>
+tout écrire en majuscules
+Renvoie une chaîne ou chaque caractère BMP a été converti en majuscule. Les surrogates ne sont pas modifiés.
+		</pre>
+	<center><h2> <a name="Evènements">Evènements</a></h2></center>
+		<pre>
+				<h4><b>onmouseup:</b></h4>		
+En relâchant une touche de la souris. Pour les attributs de Event voir onmousedown.
+Objets concernés : Button, document et Link.
+				<h4><b>onmousemove:</b></h4>
+En bougeant la souris. Pour les attributs de Event voir onmousedown.
+Objets concernés : window et document
+				<h4><b>onmouseout:</b></h4>
+En quittant l'élément avec la souris.
+Objets concernés : Area, Layer et Link. Pour les attributs de Event voir onmousedown.
+				<h4><b>onmouseover:</b></h4>
+En passant sur l'élément avec la souris.
+Objets concernés : Area, Layer et Link. Pour les attributs de Event voir onmousedown.
+				<h4><b>onselect:</b></h4>
+En sélectionnant du texte.
+Objets concernés : text et Textarea.
+				<h4><b>onreset:</b></h4>
+Lors de l'initialisation du formulaire.
+Objet concerné : form.
+				<h4><b>onsubmit:</b></h4>
+En envoyant le formulaire
+Objets concernés : form
+				<h4><b>onresize:</b></h4>
+Lors du redimensionnement du fichier.
+Objet concerné : window.
+				<h4><b>onmove:</b></h4>
+Lors du déplacement du fichier.
+Objet concerné : window.
+				<h4><b>dragdrop:</b></h4>
+Lors d'un glisser-déposer vers la fenêtre.
+Objet concerné : window.
+				<h4><b>onkeypress</b></h4>
+Lorsqu'on maintient une touche appuyée. Pour tous les évènements clavier, Event à pour attribut keyCode (Internet Explorer) 
+ou which (Netscape) et contient le code de la touche enfoncée.
+Objets concernés : document, Image, Link et TextArea.
+				<h4><b>onkeyup:</b></h4>
+Lorsqu'on relâche sur une touche. Pour tous les évènements clavier, Event à pour attribut keyCode (Internet Explorer) 
+ou which (Netscape) et contient le code de la touche enfoncée.
+Objets concernés : document, Image, Link et TextArea.
+				<h4><b>onload:</b></h4>
+Lors du chargement de la page HTML, d'une frame ou d'une image.
+Objets concernés : Image, Layer et window.
+				<h4><b>onunload:</b></h4>
+En quittant le fichier. L'objet Event ne subit pas la phase de bouillonnement avec onunload.
+Objet concerné : window
+				<h4><b>onabort:</b></h4>
+En cas d'interruption de chargement d'une image.
+Objets concernés : Image.
+				<h4><b>onblur:</b></h4>
+Lorsque l'utilisateur quitte l'objet et que celui-ci perd le focus.
+Objets concernés : Button, Checkbox, FileUpload, Layer, Password, Radio, Reset, Select, Submit, Text, TextArea et window.
+				<h4><b>onchange:</b></h4>
+Lorsque l'utilisateur quitte l'objet après l'avoir modifié et que celui-ci perd le focus.
+Objets concernés : FileUpload, Select, Submit, Text et TextArea.
+				<h4><b>onclick:</b></h4>
+Lors d'un clique de souris sur l'objet.
+Objets concernés : Button, document, Checkbox, Link, Radio, Reset, Select et Submit.
+				<h4><b>ondblclick:</b></h4>
+Lors d'un double clique de souris sur l'objet.
+Objets concernés : Button, document, Checkbox, Link, Radio, Reset, Select et Submit.
+				<h4><b>onerror:</b></h4>
+Survient lors d'une erreur de chargement.
+Objets concernés : Image et window.
+				<h4><b>onfocus:</b></h4>
+Lorsque l'objet est sélectionné et prend le focus.
+Objets concernés : Button, Checkbox, FileUpload, Layer, Password, Radio, Reset, Select, Submit, Text, TextArea et window.
+				<h4><b>onkeydown:</b></h4>
+Lorsqu'on appuie sur une touche. Pour tous les évènements clavier, Event a pour attribut keyCode (Internet Explorer) ou 
+which (Netscape) et contient le code de la touche enfoncée.
+</pre>	
+	<center><h2> <a name="Op">Opérateurs</a></h2></center>
+		<pre>	
+				<h4><b>Affectation (= et ses dérivés):</b></h4>	
+ma_var = "La valeur affectée";
+2 = "valeur"      // erreur de syntaxe
+2 + a = "valeur"    // erreur car l'addition est évaluée en premier et son résultat n'est pas une variable
+2 + (a = "valeur")  // correct car l'affectation a lieu avant l'addition.
+				<h4><b>Concaténation (+):</b></h4>
+Exemple de concaténation de chaînes
+s1 = "un ";
+s2 = "bout";
+alert(s1 + s2); // Affiche "un bout"
+
+Exemple de concaténation d'une chaîne avec un nombre
+s = "Valeur du nombre : ";
+n = 10;
+alert(s + n); // Affiche "Valeur du nombre : 10"
+
+Autre exemple de concaténation d'une chaîne avec un nombre
+s = "17"; // Une chaîne représentant un nombre
+n = 89;
+alert(s + n); // Affiche "1789" et non pas 106
+
+Exemple de concaténation d'objets divers
+t = Array(1,2,3);
+d = Date();
+alert(t+d); // Affiche "1,2,3Fri Jan 20 17:13:32 2006"				
+				<h4><b>Addition (+):</b></h4>
+En présence de deux opérandes de type number ou boolean, d'objets construits avec new Number, de l'objet null, ou de la valeur undefined, 
+l'opérateur d'addition va effectuer la somme arithmétique des deux valeurs, après les avoir converties en nombre le cas échéant. 
+Le résultat de l'addition est de type number :
+
+Exemple :
+
+3 + 1 donne 4
+Dans le cas limite Infinity + -Infinity, le résultat est NaN.
+
+Exemple :
+
+3 + "bonjour" donne "3bonjour" (et non 0)
+Accessoirement, l'opérateur + avec une seule opérande à sa droite se comporte comme un opérateur unaire de conversion en nombre, 
+comme la méthode Number(). C'est très utile pour forcer justement les autres + à additionner au lieu de concaténer :
+
+ "3" + 10 +  "5" === "3105";
++"3" + 10 + +"5" === 18    // les chaînes sont converties explicitement en nombres				
+				<h4><b>Soustraction (-):</b></h4>
+Retourne la différence arithmétique entre deux valeurs de type number ou converties dans ce type.
+Le résultat est lui-même de type number.
+Comme pour tous les opérateurs arithmétiques, si l'une des deux opérandes, (ou les deux) n'est pas un nombre (NaN, soit à l'origine, 
+soit parce que la conversion en nombre n'a pas été possible), l'opérateur renvoie NaN (Not a Number). Dans le cas limite Infinity-Infinity, 
+le résultat est également NaN.
+
+Accessoirement, le signe - avec une seule opérande à sa droite devient un opérateur unaire qui en change le signe 
+(après l'avoir convertie en nombre si nécessaire).				
+				<h4><b>Multiplication (*):</b></h4>
+Retourne le produit arithmétique de deux valeurs de type number ou converties dans ce type.
+Le résultat est lui-même de type number.
+Comme pour tous les opérateurs arithmétiques, si l'une des deux opérandes, (ou les deux) n'est pas un nombre (NaN, soit à l'origine, 
+soit parce que la conversion en nombre n'a pas été possible), l'opérateur renvoie NaN (Not a Number). Dans le cas limite Infinity*0, 
+le résultat est également NaN.
+				<h4><b>Division (/):</b></h4>
+L'opérateur de division permet d'effectuer la division de deux entités de type number ou converties dans ce type.
+Le résultat est lui-même de type number.
+Comme pour tous les opérateurs arithmétiques, si l'une des deux opérandes, (ou les deux) n'est pas un nombre (NaN, soit à l'origine, 
+soit parce que la conversion en nombre n'a pas été possible), l'opérateur renvoie NaN (Not a Number). Dans les cas limite Infinity/Infinity et 0/0, 
+le résultat est également NaN.
+
+À noter : la division d'un autre nombre par zéro est possible et retourne le nombre Infinity sans provoquer d'erreur.
+				<h4><b>Modulo (%):</b></h4>
+L'opérateur '%' permet d'effectuer l'opération mathématique modulo
+
+Il retourne l'opérande de gauche modulo l'opérande de droite, et les deux opérandes sont d'abord converties en number si elles étaient d'un autre 
+type. Le résultat est lui-même de type number.Comme pour tous les opérateurs arithmétiques, si l'une des deux opérandes, (ou les deux) n'est pas 
+un nombre (NaN, soit à l'origine, soit parce que la conversion en nombre n'a pas été possible), l'opérateur renvoie NaN (Not a Number). 
+De plus, n'importe quel nombre modulo zéro retournera NaN.
+
+À noter: l'opérateur % accepte sans problème des nombres non-entiers pour les deux opérandes mais dans ce cas il y a souvent un problème de précision, 
+par exemple 4%1.6 affichera 0.7999999999999998 au lieu de 0.8.
+
+Exemple de modulo
+  nb =  7 % 3;   // nb prend la valeur 1 (car (7 - (2*3)) = 1)
+  nb = -7 % 3;   // nb prend la valeur -1
+  nb =  7 % -3;  // nb prend la valeur 1
+  nb =  4 % 1.6;  // nb prend (presque) la valeur 0.8
+				<h4><b>ET (&&):</b></h4>
+L'opérateur logique &&, aussi appelé "prérequis", détermine si deux expressions sont "vraies" (au sens booléen). 
+Le résultat est l'une des deux opérandes, et la conversion booléenne du résultat est identique au résultat de l'opérateur && dans les 
+langages où il retourne simplement un booléen. Cet opérateur est utilisé fréquemment dans les structures de contrôle if, while, etc :
+
+if ((a == true) && (b==false)) alert("C'est vrai!");
+L'opérateur && en JavaScript retourne l'opérande de gauche si elle est fausse (c'est-à-dire si sa conversion en booléen est égale à false) 
+sans évaluer l'expression de droite, et sinon, évalue et retourne l'opérande de droite. Par conséquent, son résultat n'est généralement pas 
+un booléen et && n'est pas strictement commutatif :
+
+"chaîne" && 25    // retourne 25
+25 && "chaîne"    // retourne "chaîne"
+NaN && new Date()    // retourne NaN et ne crée pas d'objet Date
+new Date() && NaN   // retourne NaN après avoir créé un objet Date
+null && ""    // retourne null
+"" && null    // retourne ""
+Cela peut provoquer quelques comportements inattendus, par exemple :
+
+if(("vrai" && "vrai") == true)    // cette condition ne sera jamais vraie, alors que ce serait le cas en C
+Mais on peut aussi en tirer partie pour condenser un code tel que celui-ci :
+
+if( erreur )
+    x=prompt( "Échec de l'opération. Recommencer ?" )
+en le remplaçant par celui-ci :
+
+erreur && (x=prompt( "Échec de l'opération. Recommencer ?" ))
+D'où le nom "prérequis" : l'opérande de droite requiert que l'opérande de gauche soit vraie pour être évaluée et retournée.
+				<h4><b>OU (||):</b></h4>
+L'opérateur logique ||, aussi appelé "défaut", détermine si au moins une expression est "vraie" (au sens booléen). 
+Le résultat est l'une des deux opérandes, et la conversion booléenne du résultat est identique au résultat de l'opérateur || dans 
+les langages où il retourne simplement un booléen.
+
+if ((a==true)||(b==true)) alert("L'une des deux propositions est vrai. Peut-être les deux");
+L'opérateur || en JavaScript retourne l'opérande de gauche si elle est vraie (c'est-à-dire si sa conversion en booléen est égale à true) 
+sans évaluer l'expression de droite, et sinon, évalue et retourne l'opérande de droite. Par conséquent, son résultat n'est généralement 
+pas un booléen et || n'est pas strictement commutatif :
+
+"chaîne" || 25    // retourne "chaîne"
+25 || "chaîne"    // retourne 25
+NaN || new Date()    // retourne new Date()
+new Date() || NaN   // retourne new Date()
+null || ""    // retourne ""
+"" || null    // retourne null
+close() || new Date()    // ferme la fenêtre
+new Date() || close()   // retourne new Date() et ne ferme pas la fenêtre
+Cela peut provoquer quelques comportements inattendus, par exemple :
+
+if(("vrai" || "faux") == true)    // cette condition ne sera jamais vraie, alors que ce serait le cas en C
+Mais on peut aussi en tirer partie pour condenser un code tel que celui-ci :
+
+function augmenter(n)
+{
+    if(!n) n=1
+    ...
+en le remplaçant par celui-ci :
+
+function augmenter(n)
+{
+    n=n||1
+    ...
+D'où le nom "défaut" : si l'opérande de gauche a une valeur non-nulle, elle est utilisée, mais sinon l'opérande de droite est utilisée 
+comme valeur par défaut. Cela permet à la fonction dans ce dernier exemple de prévoir une valeur par défaut pour son argument 'n', 
+au cas où il ne serait pas fourni.
+				<h4><b>NON (!):</b></h4>
+L'opérateur de négation ! contredit logiquement l'expression qu'il précède. Il en convertit d'abord la valeur en booléen si elle était 
+d'un autre type, et retourne le booléen contraire.
+
+if (!true) alert("alors c'est faux!");
+Si on l'utilise deux fois de suite (!!) il permet simplement de convertir la valeur de son opérande en booléen :
+
+"chaîne" != true
+mais
+
+!! "chaîne" === true		
+				<h4><b>Et binaire (&):</b></h4>
+Cet opérateur retourne pour deux opérandes entiers (a et b) un nombre entier c dont chaque bit est calculé par la table de vérité suivante :
+
+a & b = c
+0   0   0
+0   1   0
+1   0   0
+1   1   1
+				<h4><b>Ou binaire (|):</b></h4>
+Cet opérateur retourne pour deux opérandes entiers (a et b) un nombre entier c dont chaque bit est calculé par la table de vérité suivante :
+
+a | b = c
+0   0   0
+0   1   1
+1   0   1
+1   1   1
+				<h4><b>Ou exclusif binaire (^):</b></h4>
+Cet opérateur retourne pour deux opérandes entiers (a et b) un nombre entier c dont chaque bit est calculé par la table de vérité suivante :
+
+a ^ b = c
+0   0   0
+0   1   1
+1   0   1
+1   1   0
+				<h4><b>Non binaire (~):</b></h4>
+Cet opérateur retourne pour un opérande entier a un nombre entier c dont chaque bit est l'opposé du bit original :
+
+~a = c
+ 0   1
+ 1   0
+				<h4><b>Égalité (==, ===):</b></h4>
+L'opérateur d'égalité == renvoie la valeur vrai si les deux termes à comparer sont équivalents.
+
+valeur="50";
+if (valeur == 50) alert("valeur vaut 50");
+// l'alerte sera affichée
+L'opérateur === compare les valeurs et leur type. Le résultat est vrai (true) si les deux valeurs sont égales et de même type.
+
+valeur="50";
+if (valeur === 50) alert("valeur vaut 50 (nombre entier)");
+// l'alerte ne sera pas affichée (chaîne et entier sont deux types différents)
+Si les deux opérandes sont des références (types object, function...), c'est les références qui sont comparées.
+
+if ([] == []) alert("les deux listes son identiques");
+// l'alerte ne sera pas affichée (chaque opérande est une référence différente même si les listes [] et [] sont semblables)
+Quelques valeurs spéciales :
+
+undefined est seulement équivalent, mais pas identique, à null.
+La chaîne vide "" est équivalente au nombre zéro, au booléen false, et à une liste vide [].
+Tous les nombres sont équivalents à leurs représentations sous forme de chaîne.
+Le nombre 1 est, de plus, équivalent au booléen true.
+Par contre le nombre NaN n'est pas équivalent à la chaîne "NaN".
+Ces équivalences sont commutatives.
+				<h4><b>Inégalité (!=, !==):</b></h4>
+L'opérateur d'inégalité != renvoie la valeur vrai si les deux termes à comparer sont différents.
+
+valeur="50";
+if (valeur != 50) alert("valeur ne vaut pas 50");
+// l'alerte ne sera pas affichée
+L'opérateur !== compare les valeurs et leur type. Le résultat est vrai (true) si les deux valeurs sont différentes ou de type différent.
+
+valeur="50";
+if (valeur !== 50) alert("valeur ne vaut pas 50 (nombre entier)");
+// l'alerte sera affichée (chaîne et entier sont deux types différents)
+				<h4><b>Ordre (<, <=, >=, >):</b></h4>
+Respectivement inférieur, inférieur ou égal, supérieur ou égal, supérieur, permet de comparer des valeurs.
+if (10 > 5) alert("Normal, c'est le double");
+À l'instar de l'opérateur +, les opérateurs de comparaison peuvent comparer numériquement ou alphabétiquement. 
+Si les deux opérandes sont de types number ou boolean, object construit par new Number, ou les valeurs null ou undefined 
+(les mêmes valeurs qui font que l'opérateur + les additionnerait), alors les valeurs sont converties en nombres et comparées en tant que telles. 
+Sinon, les valeurs sont converties en chaînes et comparées alphabétiquement.		
+				<h4><b>Opérateurs d'incrémentation et décrémentation (++ --):</b></h4>
+Ces deux opérateurs proposent un moyen simple d'incrémenter ou décrémenter une variable de type number. Si l'opérande n'est pas de type number, 
+elle est convertie automatiquement. Si ce n'est pas une variable du tout, cela provoque une erreur comme pour l'affectation.
+
+a = 0;
+a++; // Réalise a = Number(a) + 1;
+alert(a); // Affiche 1
+a--;
+alert(a); // Affiche 0
+
+Application éronnée sur une chaîne
+s = "une chaîne";
+s++; // Number("une chaîne") donne NaN, et NaN+1 reste NaN.
+alert(s); // Affiche "NaN", et la chaîne de départ est perdue.	
+		</pre>
+		
 	</div>
+</div>
+
 <script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
 
 </html>
