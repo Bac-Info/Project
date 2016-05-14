@@ -1,0 +1,361 @@
+<!DOCTYPE html><html>
+
+<head> 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BAC Info | Php Cours</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/soluex.js"></script>
+<style>
+body {
+	background-color: #eee;
+}
+.navbar-default {
+	background-color: #B2C3D8;
+	border-color: #B2C3D8;
+}
+</style>
+</head>
+
+<body>
+<!--Begin nav -->
+<nav class="navbar navbar-default ">
+    <div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.Php">Acceuil</a>
+		</div>
+		<div>
+			<ul class="nav navbar-nav">
+				<li><a href="Php.html">Intro</a></li>
+				<li class="active dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cours Php<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#Var">Fonctions utiles pour les variables</a></li>
+						<li><a href="#String">Fonctions utiles pour les chaines</a></li>
+						<li><a href="#Array">Fonctions utiles pour les tableaux</a></li>
+						<li><a href="#Date">Fonctions concernant le type Date</a></li>
+						<li><a href="#PP">Passage des paramètres à une page php</a></li>
+						<li><a href="#TBD">Traitement sur une base de données</a></li>
+						<li><a href="#Open">Ouverture d’une page par instruction Php</a></li>		
+						<li><a href="#Rem">Remarque</a></li>						
+					</ul>
+				</li>
+				<li><a href="Phpex.php">Exercices Php</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!--End nav -->
+<div class="container">
+	<div class="well">
+		<center><h2><a name="Var">Fonctions utiles pour les variables</a></h2></center>
+			<pre><h3 style="color:purple">gettype($nom_var);</h3>
+				<h4><b>Rôle: </b></h4><p>Détèrminer le type de données de la variable.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $x = 2.3 la résultat sera: Double</p>
+			</pre>
+			<pre><h3 style="color:purple">settype($nom_var,'type');</h3>
+				<h4><b>Rôle: </b></h4><p>Définit explicitement le type de variable.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $x = 2.3 et 'type'= 'Integer' la résultat sera: $x = 2</p>
+			</pre>
+			<pre><h3 style="color:purple">isset($nom_var);</h3>
+				<h4><b>Rôle: </b></h4><p>Voir si une variable possède une valeur ou non.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $x = 2.3 la résultat sera: true </p>
+			</pre>
+			<pre><h3 style="color:purple">unset($nom_var);</h3>
+				<h4><b>Rôle: </b></h4><p>détruit une variable</p>
+				<h4><b>Exemple: </b></h4><p>Pour unset($x) la résultat de isset($x) sera: false</p>
+			</pre>
+			<pre><h3 style="color:purple">empty($nom_var);</h3>
+				<h4><b>Rôle: </b></h4><p>Renvoie true si la variable est vide ou vaut 0, sinon renvoie false</p>
+				<h4><b>Exemple: </b></h4><p>Pour $x = 2.3 la résultat sera: false </p>
+			</pre>
+			<pre><h3 style="color:purple">is_'type'($nom_var);</h3>
+				<h4><b>Rôle: </b></h4><p>Détermine si la variable est un 'type'</p>
+				<h4><b>Exemple: </b></h4><p>Pour $x = 2.3 la résultat de is_double($x) sera: True</p>
+			</pre>
+			<pre><h3 style="color:purple">intval($nom_var);</h3>
+				<h4><b>Rôle: </b></h4><p>Définit un entier.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $x = '2.3 degrés' la résultat sera: 2</p>
+			</pre>
+			<pre><h3 style="color:purple">doubleval($nom_var);</h3>
+				<h4><b>Rôle: </b></h4><p>Définit un double.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $x = '2.3 degrés' la résultat sera: 2.3</p>
+			</pre>
+			<pre><h3 style="color:purple">strval($nom_var);</h3>
+				<h4><b>Rôle: </b></h4><p>Définit une chaîne.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $x = '2.3 degrés' la résultat sera: 2.3 degrés</p>
+			</pre>					
+		<center><h2><a name="String">Fonctions utiles pour les chaînes</a></h2></center>
+			<pre><h3 style="color:purple">chr('code ASCII');</h3>
+				<h4><b>Rôle: </b></h4><p>Retourne le caractère dont le code ASCII est donnée.</p>
+				<h4><b>Exemple: </b></h4><p>Pour 'code ASCII' = 65 la résultat sera: 'A'</p>
+			</pre>		
+			<pre><h3 style="color:purple">ord($ch);</h3>
+				<h4><b>Rôle: </b></h4><p>Retourne le code ASCII du premier caractère d'une chaîne.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $ch = 'A' la résultat sera: 65</p>
+			</pre>	
+			<pre><h3 style="color:purple">strlen($ch);</h3>
+				<h4><b>Rôle: </b></h4><p>Retourne la longueur d'une chaîne de caractère.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $ch = 'Velzimar' la résultat sera: 8</p>
+			</pre>	
+			<pre><h3 style="color:purple">strtoupper($ch);</h3>
+				<h4><b>Rôle: </b></h4><p>Mettre une chaîne de caractère en majuscule.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $ch = 'Velzimar' la résultat sera: 'VELZIMAR'</p>
+			</pre>	
+			<pre><h3 style="color:purple">strtolower($ch);</h3>
+				<h4><b>Rôle: </b></h4><p>Mettre une chaîne de caractère en minuscule.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $ch = 'Velzimar' la résultat sera: 'velzimar'</p>
+			</pre>	
+			<pre><h3 style="color:purple">strcmp($ch1,$ch2);</h3>
+				<h4><b>Rôle: </b></h4><p>Renvoie la valeur 0 si les deux chaînes sont identiques
+(On tient compte sur les majuscules et les minuscules).</p>
+				<h4><b>Exemple: </b></h4><p>Pour $ch1 = 'Velzimar' et $ch2 = 'VELZIMAR' la résultat sera: <> 0</p>
+			</pre>
+			<pre><h3 style="color:purple">strcasecmp($ch1,$ch2);</h3>
+				<h4><b>Rôle: </b></h4><p>Renvoie la valeur 0 si les deux chaînes sont identiques
+(On ne tient pas compte sur les majuscules et les minuscules).</p>
+				<h4><b>Exemple: </b></h4><p>Pour $ch1 = 'Velzimar' et $ch2 = 'VELZIMAR' la résultat sera: 0</p>
+			</pre>	
+			<pre><h3 style="color:purple">trim($ch);</h3>
+				<h4><b>Rôle: </b></h4><p>Effacer les espaces de début et de fin de chaîne.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $ch = '   Velzimar   ' la résultat sera: 'Velzimar'</p>
+			</pre>	
+			<pre><h3 style="color:purple">substr($ch,$pos,$long);</h3>
+				<h4><b>Rôle: </b></h4><p>Extraire une sous-chaîne de caractère.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $ch = 'Velzimar' et $pos = 0  et $long = 4 la résultat sera: 'Velz'</p>
+			</pre>	
+			<pre><h3 style="color:purple">strpos($ch,$motif);</h3>
+				<h4><b>Rôle: </b></h4><p>Trouver la première occurence d'un motif dans une chaîne.
+(Si elle n'existe pas la Fonction renvoie False)</p>
+				<h4><b>Exemple: </b></h4><p>Pour $ch = 'Velzimar' et $motif = 'Vel' la résultat sera: 0</p>
+			</pre>	
+			<pre><h3 style="color:purple">strrpos($ch,$motif);</h3>
+				<h4><b>Rôle: </b></h4><p>Trouver la dernière occurence d'un motif dans une chaîne.
+(Si elle n'existe pas la Fonction renvoie False)</p>				
+				<h4><b>Exemple: </b></h4><p>Pour $ch = "Velzimar j'en ai marre!" et $motif = 'mar' la résultat sera: 17</p>
+			</pre>	
+			<pre><h3 style="color:purple">strrev($ch);</h3>
+				<h4><b>Rôle: </b></h4><p>Inverser l'ordre des caractères d'une chaîne.</p>				
+				<h4><b>Exemple: </b></h4><p>Pour $ch = "Velzimar" la résultat sera: 'ramizleV'</p>
+			</pre>	
+			<pre><h3 style="color:purple">str_replace($ch1,$ch2,$ch);</h3>
+				<h4><b>Rôle: </b></h4><p>Remplacer ch1 par ch2 se trouvant dans ch.</p>				
+				<h4><b>Exemple: </b></h4><p>Pour $ch = "Karkadan" et $ch1 = 'dan' et $ch2 = 'fan' la résultat sera: 'Karkafan'</p>
+			</pre>	
+			<pre><h3 style="color:purple">split($Separator,$ch);</h3>
+				<h4><b>Rôle: </b></h4><p>Découper une chaîne à base d'un séparateur(Dans un tableau).</p>				
+				<h4><b>Exemple: </b></h4><p>Pour $ch = "Vel'zimar" et $Separator = "'" la résultat de print $res[0] sera: 'Vel'</p>
+			</pre>						
+		<center><h2><a name="Array">Fonctions utiles pour les tableaux</a></h2></center>
+			<pre><h3 style="color:purple">count($var_tableau);</h3>
+				<h4><b>Rôle: </b></h4><p>Compter le nombre d'éléments affectés.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $T = array("A","B"); la résultat sera: 2</p>
+			</pre>
+			<pre><h3 style="color:purple">current($var_tableau);</h3>
+				<h4><b>Rôle: </b></h4><p>Déterminer la valeur de l'élément en cours.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $T[3] = "C"; la résultat sera: "C"</p>
+			</pre>
+			<pre><h3 style="color:purple">key($var_tableau);</h3>
+				<h4><b>Rôle: </b></h4><p>Déterminer l'indice de l'élément en cours.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $T[3] = "C"; la résultat sera: 3</p>
+			</pre>		
+			<pre><h3 style="color:purple">list($i,$val); each($var_tableau);</h3>
+				<h4><b>Rôle: </b></h4><p>Parcourir les éléments même si les indices ne sont pas consécutifs.</p>
+				<h4><b>Exemple: </b></h4><p>
+$T[0] = "A";
+$T[1] = "B";
+$T[2] = "C";
+while (list($i,$val) = each($T)){
+	echo $i ." - ". $val;
+}
+la résultat sera:
+"0 - A"
+"1 - B"
+"2 - C"</p>
+			</pre>	
+			<pre><h3 style="color:purple">sort($var_tableau);</h3>
+				<h4><b>Rôle: </b></h4><p>Trier les éléments et réaffecte les indices.</p>
+				<h4><b>Exemple: </b></h4><p>
+$T[0] = "50";
+$T[1] = "6";
+$T[2] = "12";
+while (list($i,$val) = each($T)){
+	echo $i ." - ". $val;
+}
+la résultat sera:
+"0 - 6"
+"1 - 12"
+"2 - 50"			 
+				</p>
+			</pre>		
+			<pre><h3 style="color:purple">asort($var_tableau);</h3>
+				<h4><b>Rôle: </b></h4><p>Trier les éléments et ne réaffecter pas les indices.</p>
+				<h4><b>Exemple: </b></h4><p>
+$T[0] = "50";
+$T[1] = "6";
+$T[2] = "12";
+while (list($i,$val) = each($T)){
+	echo $i ." - ". $val;
+}
+la résultat sera:
+"1 - 6"
+"2 - 12"
+"0 - 50"			 
+				</p>
+			</pre>	
+			<pre><h3 style="color:purple">ksort($var_tableau);</h3>
+				<h4><b>Rôle: </b></h4><p>Trier les éléments selon leur indice.</p>	 
+				</p>
+			</pre>				
+			<pre><h3 style="color:purple">rsort($var_tableau);</h3>
+				<h4><b>Rôle: </b></h4><p>Trier les éléments dans l'ordre inverse et réaffecte les indices.</p>
+				<h4><b>Exemple: </b></h4><p>
+$T[0] = "50";
+$T[1] = "6";
+$T[2] = "12";
+while (list($i,$val) = each($T)){
+	echo $i ." - ". $val;
+}
+la résultat sera:
+"0 - 6"
+"1 - 12"
+"2 - 50"			 
+				</p>
+			</pre>		
+			<pre><h3 style="color:purple">arsort($var_tableau);</h3>
+				<h4><b>Rôle: </b></h4><p>Trier les éléments dans l'ordre inverse et ne réaffecter pas les indices.</p>
+				<h4><b>Exemple: </b></h4><p>
+$T[0] = "50";
+$T[1] = "6";
+$T[2] = "12";
+while (list($i,$val) = each($T)){
+	echo $i ." - ". $val;
+}
+la résultat sera:
+"1 - 6"
+"2 - 12"
+"0 - 50"			 
+				</p>
+			</pre>		
+			<pre><h3 style="color:purple">krsort($var_tableau);</h3>
+				<h4><b>Rôle: </b></h4><p>Trier les éléments dans l'orde inverse selon leur indice.</p>	 
+				</p>
+			</pre>	
+		<center><h2><a name="Date">Fonctions concernant le type date</a></h2></center>
+			<pre><h3 style="color:purple">checkdate($m,$j,$a);</h3>
+				<h4><b>Rôle: </b></h4><p>Retourner true si la date donnée est valide sinon retourner false.</p>
+				<h4><b>Exemple: </b></h4><p>Pour $m = 10 et $j = 5 et $a = 1997 la résultat sera: true</p>
+			</pre>		
+			<pre><h3 style="color:purple">date('Y-m-d H:i:s',[$timestamp]);</h3>
+				<h4><b>Rôle: </b></h4><p>Retourner une date selon le timestamp ou retourner la date courante si le timestamp 
+n'est pas saisit.</p>
+				<h4><b>Exemple: </b></h4><p>
+$date = date('Y-m-d H:i:s',334926792729792);
+la résultat de echo $date sera: "2000-01-16 12:00:16"</p>
+			</pre>		
+			<pre><h3 style="color:purple">getdate([$timestamp]);</h3>
+				<h4><b>Rôle: </b></h4><p>Retourner un tableau contenant les informations suivantes:
+['seconds','minutes','hours','mday','wday','mon','year','yday','weekday','month']</p>
+				<h4><b>Exemple: </b></h4><p>
+$a = getdate();
+echo "le jour du mois: ".$a["mday"]." -- ";
+echo "le jour de la semaine: ".$a["wday"]." -- ";
+echo "le jour d'année: ".$a["yday"]." -- ";
+echo "le nom du jour de la semaine: ".$a["weekday"]." -- ";
+echo "le nom du mois: ".$a["month"];
+la résultat sera:
+le jour du mois: 27 -- le jour de la semaine: 0 -- le jour d'année: 86 -- le nom du jour de la semaine: Sunday -- le nom du mois: March
+				</p>
+			</pre>	
+			<pre><h3 style="color:purple">time();</h3>
+				<h4><b>Rôle: </b></h4><p>Retourner le timestamp courante.</p>
+			</pre>
+			<pre><h3 style="color:purple">mktime($h,$min,$s,$m,$j,$y);</h3>
+				<h4><b>Rôle: </b></h4><p>Retourner le timestamp correspondant aux arguments fournis.</p>
+				<h4><b>Exemple: </b></h4><p>
+$ns = mktime(12,12,12,03,28,2000);				
+$date = date('Y-d-m H:i:s',$ns);
+echo 'Ce nombre de secondes $ns correspond a cette date $date';
+la résultat sera:
+Ce nombre de secondes 954241932 correspond a cette date 2000-28-03 12:12:12
+</p>
+			</pre>
+			<pre><h3 style="color:purple">strtotime($dateCh);</h3>
+				<h4><b>Rôle: </b></h4><p>Essayer de lire une date au format anglais et de la transformer en timestamp.</p>
+				<h4><b>Exemple: </b></h4><p>
+$one = strtotime('10 september 2000');
+$plus = strtotime('10 september 2000 + 1day');
+echo "<br>Aujourd'hui est: ". $date = date('Y-d-m H:i:s',$one)." Le jour suivant est: ".$date = date('Y-d-m H:i:s',$plus);
+la résultat sera:
+Aujourd'hui est: 2000-10-09 00:00:00 Le jour suivant est: 2000-11-09 00:00:00
+</p>
+			</pre>	
+		<center><h2><a name="PP">Passage des paramètres à une page php</a></h2></center>
+			<pre><h3 style="color:purple">$_GET[$name];</h3><h3 style="color:purple">$_POST[$name];</h3></pre>		
+		<center><h2><a name="TBD">Traitement sur une base de données</a></h2></center>
+			<pre>
+				<h3 style="color:purple">Cinq étapes nécessaire:</h3>
+				<h4>
+					<ol>
+				<li>/*Se Connecter*/		mysql_connect('localhost','root','') or die('Error1') ;</li>
+				<li>/*Selectionner Une Base*/	mysql_select_db('azerty') or die ('Error2');</li>
+				<li>/*Faire la requette*/		$res = "Ecrire votre requête SQL ici" ;</li>
+				<li>/*Traitement*/			if ($what = mysql_query($res)){
+					while($ligne = mysql_fetch_array($what)){
+						echo "$ligne[Colonne1] $ligne[Colonne2] ..." ;
+					}
+				}</li>
+				<li>/*Fermer la base */		mysql_close();</li>
+					</ol>
+				</h4>	
+				<h3 style="color:purple">Autres fonctions utiles:</h3>	
+				<h4>
+					<ul>
+				<li>//Format UTF-8
+		echo &ltmeta http-equiv='content-type' content='text/html;charset=utf-8'/&gt
+				</li>	
+				<li>//Afficher la liste des bases existant
+		echo "Les bases de données existant sont:&ltbr&gt";
+		$result = mysql_list_dbs();
+		$num = mysql_num_rows($result);
+		for ($i=0; $i&lt $num; $i++){
+			echo "&ltli&gt".mysql_db_name($result,$i)."&ltbr&gt";
+		}	
+				</li>
+				<li>//Le nombre des colonnes affectées
+		echo "Le nombre des colonnes affectées sont: ".mysql_affected_rows()."&ltbr&gt";
+				</li>	
+				<li>//Créer une base de donnée 
+		mysql_create_db($base,$id);
+				</li>	
+				<li>//Nettoyer la mémoire
+		mysql_free_result($res);		
+				</li>
+					</ul>
+				</h4>
+			</pre>		
+		<center><h2><a name="Open">Ouverture d’une page par instruction Php</a></h2></center>
+			<pre><h3 style="color:purple">header("location:$URL")</h3></pre>
+		<center><h2><a name="Rem">Remarque:</a></h2></center>
+			<pre><h3 style="color:purple">Script permettant d'insérer automatiquement des options dans une liste déroulante 
+depuis une table d'une base( A mettre dans la partie BODY après &lt/Select&gt)</h3>
+				<h4>
+			<ul>
+				<li>mysql_connect('localhost','root','') or die('Error1') ;</li>
+				<li>mysql_select_db('azerty') or die ('Error2');</li>
+				<li>$res = "SELECT colonne FROM table" ;</li>
+				<li>if ($what = mysql_query($res)){
+	while($ligne = mysql_fetch_array($what)){
+		echo "&ltoption&gt$ligne[Colonne1]&lt/option&gt" ;
+	}
+}</li>
+			</ul>
+				</h4>
+			</pre>			
+	</div>
+</div>
+<script>    $("#menu-toggle").click(function(e) {        $("#wrapper").toggleClass("toggled");    });</script></body>
+
+</html>
